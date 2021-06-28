@@ -1,0 +1,83 @@
+/* HOVER */
+        .special:hover
+         input:focus
+         li:first-child
+          li:nth-child(2n+1)
+
+          a:visited{
+     color: violet;
+ }
+
+
+
+ /* Pseudo element "::" and inside content: ; */
+
+h2::before{
+    content: "Hello "; /*to add Hello before every h2*/
+    color: burlywood;
+}
+
+       .bye::after
+
+
+      /* Counter */
+
+
+body{
+    counter-reset: countkari; /*setting a coutnter by a name*/
+}
+p::before{
+    counter-increment: countkari; /*incrementing counter*/
+    content: "Hello " counter(countkari ) " : "; /*displaying counter*/
+}
+
+
+
+ /*static:not affected by left,right,top,bottom, default is static 1st,6th
+     
+     relative:position is relative to it normal position, 2nd
+
+     absolute:respect to the nearest positioned ancestor (first occurence of viewport) if we use left,right....etc otherwise 
+           virtually in normal space like roof on earth,no space take,3rd
+
+    fixed:relative to viewport if we use left,right....etc 
+          otherwise stay virtually in normal position like floating cloud in sky,no space take 4th
+
+     sticky:combinatiion of relative and fixed ,fifth
+
+     position: relative;
+    left: 80px;
+*/
+
+
+<!-- some sortcut keys
+ul>li.item$*3{}     //">"=inside_tag   "#" =id      "."=class,
+                     $=increment,"*"=total num, {}=inside text
+eg: ul>li*7{child $}
+-->
+
+
+/* power of CSS
+!important > inline > id > class > embeded
+ after this read about overflow,mediaquery,bootstrap,css animation,transition,css3,css selecor
+ */
+
+  <!-- to remove image backgraound: www.inpixio.com
+to add backgroud: photopea  
+if we float div inside section then section width will be Zero ,so we need to give height for section to disply background image inside section
+according to size background image may be multiplied,so we shoud stop backgroud repeat
+
+background-image: url("images/banner.png");
+    background-repeat: no-repeat;
+
+     text-decoration: none; /*to remove by default uderscore of anchor link*/
+
+     background-image: linear-gradient(45deg, lightsalmon ,tomato );  /*if we dont xternal image no need to url*/
+     padding: 10px 20px; 
+
+      box-shadow: 10px 10px 40px violet;  
+     /* at least two value (right, down,spreading, color) */
+
+
+      border-image: linear-gradient(180deg, lightsalmon,tomato);
+   border-image-slice: 1;

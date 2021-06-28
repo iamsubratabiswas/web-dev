@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specifity of CSS</title>
+    <style>
+
+/* power of CSS
+!important > inline > id > class > embeded
+ after this read about overflow,mediaquery,bootstrap,css animation,transition,css3,css selecor
+ */
+
+
+        h1{
+         color: cyan  !important ;  
+           /*!important = bang important most powerfull,bad coding style to use it*/ 
+        }
+
+        #first{
+            color: darkolivegreen;
+
+        }
+
+        .second{
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: darkviolet;" id="first" class="secodnd">CSS POWER: 
+    !important > inline > id > class > embeded </h1>
+</body>
+</html>

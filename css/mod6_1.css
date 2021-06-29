@@ -1,0 +1,38 @@
+section{
+    border: 5px solid green;
+}
+
+div{
+    border: 4px solid hotpink;
+    border-radius: 10px;
+    box-shadow: 10px 20px 40px violet;
+}
+
+.sect{
+    height: 1500px;  /*to give a height of dection ,to overcome zero
+     size and irregular floating of more section*/
+}
+
+.sect div{
+    float: left;
+    width: 45%; /*respect to section div in two column with margin proper calculation*/
+    height: 48%;  /*height to avoid irregular floating of div here
+                    inside section tow column 48*2+2*2=100% */
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.video video{ 
+    width: 100%; /*to set video width as same as div*/
+    height: 80%;
+}
+
+.sect .ytbembed{
+    height: 30%; /*.ytbembed div height adjustment 
+    it reduces div height for that particular class ,bad habit ,mamy 
+    occur irregular floating of div if next div is not in same heihgt and 
+    third and fourth div are there im same size,proper calculation needed*/
+
+}
+
+

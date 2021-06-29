@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics HTML VS HTML5</title>
+<style>
+    /* style for HTML4 */
+    div{
+        width: 100%;
+        margin-bottom: 10px;  /*margint of individual div*/
+    }
+     .firstfour{
+         height: 50px; /**/ /*height of individual div*/
+
+     }
+
+    .firstfour #header1{
+        background-color: blueviolet;
+        width: 99%;     /*height,width of div same as parent div firstfour*/
+        height: 90%;
+        color: white;
+        text-align: center;
+    }
+
+
+
+     .secondfour{
+         height: 450px; /**/ /*height of individual div*/
+         
+     }
+     .secondfour #menubar{
+
+        width: 20%;     /*height=100%,width=5% of parent div secondfour*/
+        height: 99%;
+        margin-right: 1%;
+
+     }
+
+
+    #menubar #menu{
+        background-color: lightgreen;
+        width: 96%;     /*height=100%,width=5% of parent div menubar*/
+        height: 99%;
+        color: white;
+        /* padding-top: 220px; */
+        text-align: center;
+
+    }
+    .secondfour div{
+        float: left;
+    }
+
+    .secondfour .postdiv{
+
+        width: 76%;     /*height=100%,width=5% of parent div secondfour*/
+        height: 98%;
+    }
+
+    .postdiv .post{
+        background-color: sandybrown;
+        width: 99%;     /*height=100%,width=5% of parent div secondfour*/
+        height: 48%;
+        color: white;
+        text-align: center;
+        margin:1% 0% ;
+    }
+
+    .firstfour #footer1{
+        background-color:cornflowerblue;
+        width: 99%;     /*height,width of div same as parent div firstfour*/
+        height: 90%;
+        color: white;
+        text-align: center;
+    }
+
+
+</style>
+
+</head>
+<body>
+    <!-- read HTML vs HTML5 for interview preperation-->
+
+
+    <!-- HTML4 vs HTML5 -->
+    <h1>HTML4</h1>
+
+    <div class="firstfour">
+        <div id="header1">
+            <h3>HEADER</h3>
+         </div>
+
+    </div>
+    <div class="secondfour">
+
+        <div id="menubar">
+            <div id="menu">
+                <h3>MENU</h3>
+    
+            </div>
+    
+    
+        </div>
+
+        <div class="postdiv">
+            <div class="post">
+                <h3>POST1</h3>
+                <h6>procedure</h6>
+                <p>in HTML4 <br> div1=>div id HEADER <br> div2==>div-a+ div-b <br>div-a=>div id MENU <br>div-b=>div class ( POST1,POST2) <br>div3(div id FOOTER)</p>
+
+            </div>
+            <div class="post">
+                <h3>POST2</h3>
+                <p>for HTML5 <br> by default: <br> header=>nav <br> main==>section=>article <br> footer <br> aside <br> tag available</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="firstfour">
+        <div id="footer1">
+            <h3>FOOTER</h3>
+
+        </div>
+
+    </div>
+
+<h1>HTML 4 example below only with div</h1>
+
+<div class="header">
+    <ul>
+        <li><a href="">link _1</a></li>
+        <li><a href="">link _2</a></li>
+        <li><a href="">link _3</a></li>
+    </ul>
+    <h1>romantic person here</h1>
+</div>
+<div class="container">
+    <div class="blog">
+        <h3>Romantic blog _1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, odio.</p>
+    </div>
+    <div class="blog">
+        <h3>Romantic blog _2</h3>
+        <p>Dolore, aperiam facere. Illo, quos. Deleniti qui minus consectetur asperiores.</p>
+    </div>
+    <div class="blog">
+        <h3>Romantic blog _3</h3>
+        <p>Repudiandae placeat illo recusandae minus explicabo excepturi ea quia voluptatem.</p>
+    </div>
+</div>
+<div class="footer">
+    <p>send me email</p>
+</div>
+
+<h1>im HTML4 we use div and manually define header,footer,etc by class and id</h1>
+<h1>but in HTML5 we get prebuild tag=> header,nav,main,section,article,footer etc</h1>
+<h1>in HTML4 everything done only by div,so not much sematic ,to understand view the both codes from below <br> for intervieew preperation  learn more about HTML5 from GFG,TUT. Point ,W3Sshools etc various other sites</h1>
+
+
+    <h1>HTML5</h1>
+
+
+    <header>
+        <nav>
+            <ul>  
+                <!-- nav indicate to go one page to another ,navigate -->
+                <li><a href="">link - 1</a></li>
+                <li><a href="">link - 2</a></li>
+                <li><a href="">link - 3</a></li>
+            </ul>
+        </nav>
+        <h1>romantic person</h1>
+    </header>
+ 
+    
+    <main>
+        <section class="container">   
+            <article class="blog">
+                <h3>romantic blog 1</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, voluptate?</p>
+            </article>
+            <article class="blog">
+                <h3>romantic blog 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, est?</p>
+            </article>
+            <article class="blog">
+                <h3>romantic blog 3</h3>
+                <p>Officiis, dolore. Ullam molestias autem itaque voluptatibus dolore unde quasi.</p>
+            </article>             
+        </section>
+        <section>
+    
+        </section>
+    </main>
+    
+
+
+    <footer>
+        <p>send me email</p>
+    </footer>
+
+    
+</body>
+</html>

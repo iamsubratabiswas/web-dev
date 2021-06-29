@@ -91,3 +91,82 @@ background-image: url("images/banner.png");
  <div class="button onefifth">
         <p class="tiny">Leave me a message in the</p>
     <a class="white" href=" mailto: subrotobiswas53@gmail.com">subrotobiswas53@gmail.com</a>
+
+
+
+tag name: table=> thead(tr,th),tbody(tr=row,td=data)
+css for table
+table{
+     border-collapse: collapse;
+     }
+td,th{ /*same time in two tag css*/
+        border: 1px solid lightgray;
+        padding: 0 10px;
+    }
+
+html for table
+    <table>
+        <caption></caption>
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    form and Radio:
+ <!-- fieldset to give a boudary line around all options and legend is
+  description of choices-->
+             <legend>i am legend from fielset to p(radio)</legend>
+             <!-- we must label for tag to select radio by tapping
+              anywhere in te lines p>label>input type=radio it select one 
+              of the same name field-->
+
+p>label>input:radio
+
+<form action="">
+             <legend>select option below </legend>
+             <p><label for="lamborgini"><input type="radio" name="car" id="lamborgini">select lamborgini</label></p>
+         </form>
+
+<h1>CHECKBOX</h1>
+
+         <fieldset>
+             p*3>label>input:checkbox
+
+         </fieldset>
+
+
+         <fieldset>
+             <legend>select yor books</legend>
+             <p><label for=""><input type="checkbox" name="" id=""></label></p>
+             <p><label for=""><input type="checkbox" name="" id=""></label></p>
+             <p><label for=""><input type="checkbox" name="" id=""></label></p>
+
+         </fieldset>
+
+
+
+ //special text area in paragraph to write something more
+   p>label>textarea :
+<p><label for="">special instructons : <textarea name="" id="" cols="30" rows="10"></textarea></label></p>
+
+
+//submit button
+button:submit :
+ <button type="submit">SUBMIT</button>
+
+
+ //we can add placeholder inside input to view wateermark, pattern etc we will know more in react
+
+
+ //title
+  <h1 title="Read my 2nd blog">blog 2</h1> 
+  view atrribute lists to earn more

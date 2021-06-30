@@ -1,0 +1,152 @@
+.edited::before{
+    content: " EditedElement";
+    color: white;
+    background-image: linear-gradient(deeppink,green );
+    border-radius: 5px;
+    padding: 3px 10px;
+    box-shadow: 10px 10px 40px darkgreen; 
+}
+
+/* overflow */
+.box{
+    width: 400px;
+    height: 200px;
+    border: 5px solid violet;
+    overflow: scroll;
+}
+.box2{
+    border: 4px solid peru;
+    width: 400px;
+    height: 200px;
+    visibility: hidden;
+}
+.images .logo
+{
+    height: 100px;
+    width: 100px;
+}
+
+/* transfom */
+
+.box3{
+    height: 100px;
+    width: 100px;
+    border: 1px solid rebeccapurple;
+
+}
+
+.outer{
+    background-color: gray;
+
+}
+
+.inner{
+    background-color: indianred;
+    transform: scale(.5);
+    transform: translate(100px);
+    /* last transform will be applicable ,
+    to use more than one transform use below procedure */
+    transform:rotate(45deg) scale(.5) translate(80px);
+}
+/* transition */
+.transit{
+    width: 200px;
+    height: 200px;
+    border: 5px solid cyan;
+    border-radius: 100%;
+    text-align: center;
+    background-color: lightyellow;
+    /* codes of transiton */
+    /*transition:properties duration timing-function delay*/
+    /* transition: background-color 5s ease 1s; */
+    transition: width 1s ease-in 1s;
+}
+.transit:hover{
+    background-color:red ;
+    width: 400px;
+
+}
+
+
+/* Transform an transition in bat ball */
+
+.bat{
+transition: transform .4s ease-in-out;
+/* delay doesnt need to set */
+
+}
+.bat:hover{
+    transform:rotate(-60deg) ;
+    transform-origin: 100% 0%;/*x axis 100% upper axis:0%*/
+}
+
+.ball{
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    border: 2px dashed black;
+    border-radius: 100%;
+    position: relative;
+    left: 360px;
+    bottom: 110px;
+    transition: transform .5s ease-in-out .5s;
+}
+
+/* we want to use total .field:hover on .ball */
+
+.field:hover .ball{
+    /* now if we hover on field then ball will move below code */
+    transform: translate(900PX,-400px);
+    /* x axis,y axis */
+}
+
+
+
+
+
+/*ANIMATION BOUNCING BALL  */
+
+@keyframes bouncekari {
+        0%{
+            left: 0px;
+            top: 0;
+            background-image: linear-gradient(green,deeppink);
+            
+          }
+    50%{
+        left: 400px;
+        top: 100px;
+        background-color: deeppink;
+    }
+
+     100%{
+        left: 800px;
+        top: 0;
+        background-image: linear-gradient(deeppink,green);
+        }
+    }
+
+
+.stage{
+    background-color: lightseagreen;
+    height: 200px;
+    min-width: 800px;
+
+    
+
+}
+
+.tennis {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 100%;
+    position: relative;
+}
+ 
+.stage:hover .tennis
+{
+    /* if we hover in .sage it will be applicable on .tennis  and properties changed on tennis */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: bouncekari 5s ease-in-out 2s infinite alternate;    
+}

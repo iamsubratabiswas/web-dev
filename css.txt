@@ -170,3 +170,107 @@ button:submit :
  //title
   <h1 title="Read my 2nd blog">blog 2</h1> 
   view atrribute lists to earn more
+
+
+     visibility: hidden; //to hide contents
+
+     <!-- overflow: element goes beyond its allocated area ,to stop 
+     overflow:(hidden,scroll,visible,auto) overflow x,y,-->
+
+     //favicon:special link inside head
+     link:favicon
+
+     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+//transform
+    transform: scale(.5);
+    transform: translate(100px);
+    /* last transform will be applicable ,to use more than one transform use belo */
+    transform:rotate(45deg) scale(.5) translate(80px);
+
+
+
+//transition //multiple waywe cant trasition all css properties
+//some properties height,width,background color etc works
+
+    transiton: <property> <duration> <timing-funcction> <delay>
+
+eg:
+    #delay{
+        font-size: 14px;
+        transition-property: font-size;
+        transition-duration: 4s;
+        transition-delay: 2;
+        }
+
+    #delay:hover{
+        font-size:36px;
+                }
+
+//another way: single line
+
+prectical example of:
+            .transit{
+            background-color: lightyellow;
+            transition: background-color 5s ease 1s;  
+                    }
+
+.transit:hover{
+            background-color:red ;
+              }
+
+
+
+//example bat ball transform and transition
+/* Transform an transition in bat ball */
+
+.bat{
+transition: transform .4s ease-in-out;
+/* delay doesnt need to set */
+    }
+
+.bat:hover{
+    transform:rotate(-60deg) ;
+    transform-origin: 100% 0%;    /*x axis 100% upper axis:0%*/
+          }
+
+.ball{
+    transition: transform .5s ease-in-out .5s;
+    }
+
+/* we want to use total .field:hover on .ball ,if we hover .filed then property change on .ball */
+
+.field:hover .ball{
+    transform: translate(900px,-400px);
+    /* x axis,y axis */
+}
+
+
+
+
+//ANIMATION EXAMPLE BOUNCING ball
+
+/*ANIMATION BOUNCING BALL  */
+ /*to lern more w3schools,mozila css animation properties
+ *keyframes name{ 0%{}  25%{} 50%{} 75%{} 100%{} } etc
+    animation: name duration timing-function delay iteration-count direction fill-mode; */
+//mod7_1
+
+
+
+@keyframes bouncekari {
+                       from{
+
+                           }
+
+                       to{
+
+                         }
+                     }
+
+
+ .stage:hover .tennis
+{
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: bouncekari 5s ease-in-out 2s infinite alternate;    
+}

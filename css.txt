@@ -226,7 +226,7 @@ prectical example of:
 
 .bat{
 transition: transform .4s ease-in-out;
-/* delay doesnt need to set */
+/* delay doesnt need to set if wwe dont want delay */
     }
 
 .bat:hover{

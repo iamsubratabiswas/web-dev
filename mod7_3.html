@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+      .lnk{
+            background-image: linear-gradient(45deg,lightsalmon,tomato);
+            color:green;
+            border-radius: 5px;
+            font-size: medium;
+            padding: 5px 10px;
+            text-decoration: none;
+
+        }
+        .lnk:hover{
+            padding: 8px 15px;
+            font-size: large;
+
+        }
+
+
+        .box{
+            width: 300px;
+            height: 200px;
+            font-size: 40px;
+            border: 3px solid mediumaquamarine;
+            border-radius: 5%;
+
+        }
+        .flexx{
+            display: flex;
+        }
+
+        .justify1{
+            display: flex;
+            justify-content:center;
+        }
+
+        .end{
+            display: flex;
+            justify-content:flex-end
+        }
+
+        .justicon1{
+            display: flex;
+            justify-content:space-between;
+        }
+        .evenboxly1{
+            display: flex;
+            justify-content:space-evenly;
+        }
+
+
+
+        .auto{
+            display: flex;
+        }
+        .auto1{
+            margin-left:auto;
+        }
+
+
+
+
+        .one{
+            display: flex;
+        }
+        .flex1{
+            flex:1;
+
+        }
+
+        .directon{
+            display: flex;
+            flex-direction:column;
+
+        }
+        .align{
+            display: flex;
+            flex-direction:column;
+            align-items:center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>flex works on inside contents <br> jproperties given in parent div and child div cotents arrange accordingly</h1>
+    <br><br>
+    <div class="flexx">
+        <div class="box">display:flex</div>
+        <div class="box">display:flex</div>
+        <div class="box">display:flex</div>
+    </div>
+
+
+    <br><br>
+    <div class="justify1">
+        <div class="box">justify-content:center</div>
+        <div class="box">justify-content:center</div>
+        <div class="box">justify-content:center</div>
+    </div>
+    <br><br>
+    <div class="end">
+        <div class="box">justify-content:flex-end</div>
+        <div class="box">justify-content:flex-end</div>
+        <div class="box">justify-content:flex-end</div>
+    </div>
+
+    <br><br>
+    <div class="justicon1">
+        <div class="box">justify-content:space-between</div>
+        <div class="box">justify-content:space-between</div>
+        <div class="box">justify-content:space-between</div>
+    </div>
+    
+    <br><br>
+    <div class="evenboxly1">
+        <div class="box">justify-content:space-evenly</div>
+        <div class="box">justify-content:space-evenly</div>
+        <div class="box">justify-content:space-evenly</div>
+    </div>
+
+    <br><br>
+    <div class="auto">
+        <div class="box">use class,id in last one </div>
+        <div class="box">use class,id in last one </div>
+        <div class="box auto1">margin-left:auto</div>
+    </div>
+
+    <br><br>
+    <div class="one">
+        <div class="box">use class,id in last one </div>
+        <div class="box">use class,id in last one </div>
+        <div class="box flex1">flex:1</div>
+    </div>
+
+    <br><br>
+    <div class="directon">
+        <div class="box">flex-direction:column</div>
+        <div class="box">flex-direction:column</div>
+        <div class="box">flex-direction:column</div>
+    </div>
+
+    <br><br>
+    <div class="align">
+        <div class="box">for column use align-items:center instead of justify-content:center</div>
+        <div class="box">for column use align-items:center instead of justify-content:center</div>
+        <div class="box">for column use align-items:center instead of justify-content:center</div>
+    </div>
+
+    <h1>READ ARTICLES REGARDING FLEXBOX : flexbox==> css-tricks.com <br><a target="_blank" class="lnk" title="read more about flexbox" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS FLEXBOX</a></h1>
+    <h1>flexbox is one diretional,weather row wise or columnwise</h1>
+      
+
+</body>
+</html>

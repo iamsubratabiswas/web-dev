@@ -274,3 +274,192 @@ transition: transform .4s ease-in-out;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     animation: bouncekari 5s ease-in-out 2s infinite alternate;    
 }
+
+//SOME more
+ease-in will start the animation slowly, and finish at full speed.
+ease-out will start the animation at full speed, then finish slowly.
+ease-in-out will start slowly, be fastest at the middle of the animation, then finish slowly.
+ease is like ease-in-out, except it starts slightly faster than it ends.
+linear uses no easing.
+ the steps() timing function, acts like linear
+
+
+
+
+
+//FLEXBOX:
+
+ display: flex;
+ justify-content:center;
+ justify-content:flex-end
+ justify-content:space-between
+ justify-content:space-evenly;
+  margin-left:auto;
+   flex:1;
+   flex-direction:column;
+   flex-direction:column;
+            align-items:center;
+
+
+
+//CSS GRID
+In terms of when to specifically use Grid versus Flexbox, there are two things to take into consideration:
+
+A two-dimensional or one-dimensional layout.
+A layout-first or content-first approach.
+
+TYPES: explicit, implicit 
+Grid lines are the vertical and horizontal lines =COL OR ROW PLUS 1
+grid track is the space between two grid lines.= columns and rows.
+
+
+
+.grid-container {
+  display: grid; //activating grid
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 170px);
+
+/*  Setting column and row gaps,number and size of grid tracks   */
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+
+/*  Shorthand     grid-gap: 40px; if differnt then grid-gap:40px 30px;  */ 
+
+}
+
+
+ /* Columns & Rows | Method 1
+    grid-template-columns: 200px 200px 400px;
+    grid-template-rows: 100px 100px 100px;
+    */
+
+
+/* Columns & Rows | Method 2 */
+    grid-template-columns: repeat(2, 200px) 400px;
+    grid-template-rows: repeat(3, 100px);
+
+/* the first value is the grid-row-gap and the second value is the grid-column-gap.*/
+   grid-gap: 30px 18px;
+
+
+
+
+All the direct children of a grid container are called grid items.
+
+Subgrid allows grid area and cells to track and inherit the row and column
+ sizings of the parent grid container. 
+
+grid area is the area that is the result of one or more grid cells.
+Note that we can only have rectangular or square grid areas.
+An L- or T-shaped grid area is not possible.
+
+
+
+   //we have to do set up                            
+Article 1: Rows 1 ,2, and 3 of column 1.
+Article 2: Rows 1, 2, and 3 of column 2.
+Article 3: Row 1 of column 3.
+Article 4: Row 2 of column 3.
+Article 5: Row 3 of column 3.
+
+
+    C1               C2                      C3
+
+=============================================================
+=              =              =                             =
+=              =              =          article-3          =    R1
+=              =              =                             =
+=              =               ===============================
+=              =              =                             =
+=   article-1  =   article-2  =          article-4          =    R2
+=              =              =                             =
+=              =              ===============================
+=              =              =                             =
+=              =              =          article-5          =   R3 
+=              =              =                             =
+=============================================================
+
+
+
+
+
+   //3 things
+1.Grid line numbers.
+2.Named grid lines.
+3.Named grid areas.
+
+
+
+///////////////////// HTML OF THAT LAYOUT mod7_4.html ///////////////////////////////////////
+
+     <!-- The articles block (.articles-container) is our grid container.
+         All five articles (.article and article-<number>) are our grid items. -->
+
+    <ul class="articles-container">
+        <li class="article article-1">Article 1</li>
+        <li class="article article-2">Article 2</li>
+        <li class="article article-3">Article 3</li>
+        <li class="article article-4">Article 4</li>
+        <li class="article article-5">Article 5</li>
+      </ul>
+
+
+//////////////////// CSS OF THAT LAYOUT/////////////////////////////////////////
+.articles-container {
+    list-style: none;                                     /* to remove bullet points */
+    margin: 40px auto;
+    max-width: 1000px;
+  
+    display: grid;
+  
+    grid-template-columns: repeat(2, 200px) 400px;
+    grid-template-rows: repeat(3, 100px);
+  
+     grid-gap: 30px 18px;
+}
+
+
+
+.article {
+  color: white;
+  font-family: sans-serif;
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+}
+
+.article-1 {
+  background-color: #ef3155;                              /*  Article 1 takes Rows 1 , 2, and 3 in Column 1.*/
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+.article-2 {
+    background-color: #fc46aa;                       /* using shorthand same as .article-1  Article 2 takes up Rows 1 , 2, and 3 in Column 2.  */
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+  }
+
+.article-3 {
+    background-color: #fe7d68;                          /*Article 3 takes up Row 1 in Column 3  */
+    grid-area: 1 / 3 / 2 / 4;                           /* row-start / column-start / row-end / column-end */
+}                                                      /*grid-area property to define… grid areas!*/
+
+.article-4 {
+    background-color: #fc4c4e;                         /*Article 4 takes up Row 2 in Column 3  */
+    grid-row: 2 / span 1;                              /* grid-row: 2 / span 1;==grid-row: 2 / 3;.*/
+    grid-column: 3 / span 1;
+  }
+
+
+
+.article-5 {                                              /*Article 5 takes up Row 3 in Column 3  */
+    background-color: #a04242;
+    grid-row: 3 / -1;
+    grid-column: 3 / -1;
+}                                                      /*If a grid item will span all the way to the last row or column grid
+                                                       line number, use -1 for your grid-column-end or grid-row-end value.
+                                                        -1 stands for the last grid track line in the grid.*/

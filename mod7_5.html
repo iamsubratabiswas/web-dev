@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row; /*we want for small device flex-direction to go columnwise*/
+            max-width: 1000px;
+            margin: 0 auto;  /*top,botoom=0,L,R=auto to take center*/
+        }
+        .food{
+            border: 3px solid lightgray;
+            border-radius: 30px;
+            margin: 10px;
+            width: 240px;
+        }
+
+        .food img{
+            width: 100%;
+        }
+        @media (max-width:760px ) {  
+/*IF diplsy width beyond 760px then apply beow instructions*/
+            .container{
+                flex-direction: column;
+                align-items: center;   
+
+            }
+            .container .food{
+                background-color:rosybrown;
+                width: 400px;
+            }
+
+         }
+
+        @media(min-width:1200px){ 
+/* if screen went below 1200px width then apply below instructions */
+            .container .food{
+                background-color: skyblue;
+            } 
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Media Query to make website responsive <br>Most of the time we do it with bootstrap</h1>
+
+    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">ARTICLES REGARDING MEDIA QUERY</a>
+
+<div class="container">
+    <div class="food">
+        <img src="images/foods/food.png" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iste cum eaque suscipit architecto harum quidem excepturi quia ducimus ipsa.</p>
+    </div>
+    <div class="food">
+        <img src="images/foods/food.png" alt="">
+        <p>Rerum, cumque. Distinctio quisquam dignissimos earum eveniet, tempora nesciunt officia laudantium nihil fugiat natus rerum soluta possimus. Nihil, vel voluptate?</p>
+    </div>
+    <div class="food">
+        <img src="images/foods/food.png" alt="">
+        <p>Voluptate nostrum rem nesciunt unde est ad labore! Aliquam debitis sed, vero iure reprehenderit culpa nemo repellendus laudantium in iusto?</p>
+    </div>
+    <div class="food">
+        <img src="images/foods/food.png" alt="">
+        <p>Sunt minus inventore aliquam velit praesentium beatae sapiente quod quasi. Vitae atque molestiae nostrum laudantium excepturi aspernatur similique ex nesciunt.</p>
+    </div>
+    <div class="food">
+        <img src="images/foods/food.png" alt="">
+        <p>Aliquid illum similique sint voluptatem alias, eaque, eius fuga possimus ab in incidunt quasi asperiores nostrum assumenda commodi molestias obcaecati.</p>
+    </div>
+    <div class="food">
+        <img src="images/foods/food.png" alt="">
+        <p>Eaque quo libero eligendi ea deserunt, ab eveniet cum sint minima? Voluptatibus et laudantium earum doloremque nulla cum temporibus nostrum.</p>
+    </div>
+</div>
+
+</body>
+</html>

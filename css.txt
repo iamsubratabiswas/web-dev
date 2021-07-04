@@ -300,6 +300,8 @@ linear uses no easing.
    flex-direction:column;
             align-items:center;
 
+flex-wrap: wrap; //display responsively according to the screen size
+
 
 
 //CSS GRID
@@ -463,3 +465,35 @@ Article 5: Row 3 of column 3.
 }                                                      /*If a grid item will span all the way to the last row or column grid
                                                        line number, use -1 for your grid-column-end or grid-row-end value.
                                                         -1 stands for the last grid track line in the grid.*/
+
+
+
+//MEDIA QUERY
+
+/*IF diplsy width beyond 760px then apply beow instructions*/
+ @media (max-width:760px ) {  
+   .container{
+                    flex-direction: column;
+                    align-items: center;   
+                        }
+            .container .food{
+                    background-color:rosybrown;
+                    width: 400px;
+                    }
+          }
+
+
+/* if screen went below 1200px width then apply below instructions */
+@media(min-width:1200px){ 
+            .container .food{
+                background-color: skyblue;
+            } 
+
+
+        }
+
+///NB: WE CAN DO SOME RESPONSIVE WITH FLEXBOX allows
+
+flex-wrap: wrap;  //it will arrage continer eliments according to the screen size
+
+                                                        

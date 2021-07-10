@@ -496,4 +496,45 @@ Article 5: Row 3 of column 3.
 
 flex-wrap: wrap;  //it will arrage continer eliments according to the screen size
 
-                                                        
+mod8_1 //bootstrap
+_____________________________________
+//we can use online offline both
+some of important practice sets
+button,color,background-color,round-image,image-thumbnail,card(Card Group,Card decks etc)
+navigation,(navbar=>fixed-top or fixed-bottom fixed navbar in a static position of viewport)
+<!-- to give logo bar we place an image tag in place of navbar -->
+layout=>Grid,Grid option
+Components=> Carousel
+Utilities=>Flex
+
+
+bootstrap layout: Grid=>
+ <!-- hamberger menu =>won't work until we use JavaScript 
+ Carousel also javascript dependent
+ -->
+<!-- bootstrap by default makes 12 column inside row class,so if we want to make 3 division
+ in each row then use .row>.col-4*3 -->    
+
+eg:.row>.col-4.col-sm-.col-md-
+
+ responsive:
+ if Screen becomes use class-
+ extremely small> col-
+ small=> col-sm- 
+ medium=> col-md- 
+ large=> col-lg-
+ extra large=> col-xl- 
+
+eg;  row>.col-12.col-sm-12.col-md-6.col-lg-3.col-xl-6
+
+ we can use image also instead text (img-fluid class necessary
+  to set image insde column)    
+
+  Carousel=> data-interval = time gap to slide  
+      <!-- we can put Carousel inside .container to get some defautlt margin
+       otherwise wew can change image size etc -->  
+
+d-flex,flex-row,flex-column,flex-row-reverse,justify-content,align-items    etc class 
+flex-md-column-reverse for medium devices ,to clealify vertical option set heigt to by an id     
+align-items-center=>vertical center
+justify-content-center=>horizontal center                             

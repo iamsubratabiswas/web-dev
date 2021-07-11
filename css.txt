@@ -537,4 +537,42 @@ eg;  row>.col-12.col-sm-12.col-md-6.col-lg-3.col-xl-6
 d-flex,flex-row,flex-column,flex-row-reverse,justify-content,align-items    etc class 
 flex-md-column-reverse for medium devices ,to clealify vertical option set heigt to by an id     
 align-items-center=>vertical center
-justify-content-center=>horizontal center                             
+justify-content-center=>horizontal center     
+
+
+"btn btn-primary"
+"btn btn-success"
+"btn btn-danger"
+"text-warning"
+"text-info  bg-dark"
+="p-3 mb-2  bg-success text-white">
+"img-fluid  w-25 rounded-circle img-thumbnail"
+"card"
+"row row-cols-1 row-cols-md-3 g-4"
+"nav-link disabled"
+ fixed-top
+
+ <div class="container">
+  <div class="row">
+    <div class="col-7">
+
+    </div>
+    <div class="col-5">
+      
+    </div>
+  </div>
+</div>
+
+="col-12 col-sm-12 col-md-6 col-xl-3
+"d-flex flex-lg-row flex-sm-column flex-md-column-reverse"
+"d-flex align-items-center justify-content-center"
+  <a class="nav-link" href="#backpack">Backpack</a>
+  "row align-items-center"
+  "col-md-7"
+  "col-md-5"
+
+="container"
+ <input class="form-control" type="text"> 
+        <!-- form-control to line break -->
+ background-image: linear-gradient(to bottom,#FF589B 0%,#FF136F 100%);
+box-shadow: 5px 5px 10px lightgray;

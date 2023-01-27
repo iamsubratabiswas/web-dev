@@ -576,3 +576,1107 @@ justify-content-center=>horizontal center
         <!-- form-control to line break -->
  background-image: linear-gradient(to bottom,#FF589B 0%,#FF136F 100%);
 box-shadow: 5px 5px 10px lightgray;
+
+
+
+Math.abs(), Math.round(),Math.ceil(),Math.floor(),Math.random()*100,num1=+num2
+Math.max(12,11) , Math.min(12,121,23)
+conditionals : if, else if, else  < > <= >= != == && ||
+parseInt(number),parseFloat(number), ' '+25="25", total.toFixed(3),
+console.log(typeof seenAfter);, 
+
+console.log (promise.toLowerCase() + promise.toUpperCase()+ promise.indexOf('h')+ promise.split('I'));
+var date = new Date(), =new Date('1971-12-16'),=new Date('')
+
+Arrays:
+var arr=[12,11,222,223]
+arr[2] //222
+console.log(arr)  
+position=arr.indexOf(222) //2
+arr.push(14) //[12,11,222,223,14]
+arr.pop()   //[12,11,222,223]
+arr.length //4
+arr.unshift(2) //[2,12,11,222,223]
+arr.shift()  //[12,11,222,223]
+arr1=arr.slice(2,4) or (2) //[222,223] start to (end-1)index shallow arr unchanged 
+arr2=arr.splice(1,2)  //arr2=[11,222],arr=[12,223]  //index 1 to index 2
+
+while loop;
+for(var i=0;i<10;i++){}
+if, else if, else
+switch(num)
+{
+case 100:
+	clog('i am 100')
+	break;
+case 200:
+.
+.
+   default:
+	clog('i am default')
+}
+
+
+
+function:
+
+function fun(num){
+	clog('i am function');
+	var result =num*2;
+	return result;
+}
+
+
+object:
+
+var student={id:121,phone:1242,name:"abir"}
+student["phone"]
+student.phone
+
+var pname="name"
+student[pname]
+
+
+let var1
+var var1
+const var1;
+const var1=5  // now unchangeable
+
+
+//fibonacchi
+var fibo =[0,1];
+for(var i=2;i<=10;i++)
+{
+	fibo[i]=fibo[i-1]+fibo[i-2];
+	clog(fibo[i]);
+}
+
+
+
+
+function fibonacci(n)
+{	
+	fibo=[0,1];
+	for(var i=2;i<=10;i++)
+	{
+		fibo[i]=fibo[i-1]+fibo[i-2];
+		clog(fibo[i]);
+	}
+	return fibo;
+}
+
+unique element:
+
+if(uniquename.indexOf(element)==-1)
+{
+	uniquename.push(element)
+}
+
+wordcount:
+if(speech[i]==" " && spech[i]!=" ")
+{
+ 	count++;
+}
+
+//reverse string string.length
+
+
+Lecture: 16 //
+
+17//
+
+extension: Live Server,Code Spell Checker,Javascript(ES6) Code snippets, ESLint, HTML Snippets
+
+//SETTING
+CTRL+SHIFT+P => font size,cursor,division of screen,same  tab =>different tab code open
+download=>vs code keybord shortcuts
+ctrl+f=> change one or all places in same file
+ctrl+shift+f=> multiple files => change
+SELECT=>CTRL+SHIFT+P=>add cursor to line end=>home button to take all sta rting and N for right
+alt+shift+arrow =>to select words
+ctrl+shift+p=> lower case 
+sift+home=> select line
+ctrl+d=> multiple same word cursor
+
+18//
+
+DOM=>
+inspect=>setting => disable javascrip to check without js
+<script>console.log("hello world") </script>  =>last of body=>recommended, or inside head =>sequentially
+alert(45)  //
+script:src
+if multiple javascript then it maintains order to load
+definition: js is a high level scripting or programming language ,a single threaded ,non blocking
+debugger inside js=>hold there mentioning button =>pause in debugger
+
+//Explore DOM
+document=> Whole HTML
+clog(document.body)=> only body tag
+document is like a object of javascript=> document object model
+
+//Capture Element
+document.getElementById('first').style.color='red'
+doctument.getElementsByTagName('main')
+doctument.getElementsByClassName('apple')
+
+var first=document.getElementById('first')
+first.style.backgroundColor='yellow'  //use camel case instead hyphen(background-color)
+first.style.color='green'
+first.style.fontSize='15px'
+
+var authors=doctument.getElementsByClassName('author') //array like=> collection
+for(var i=0;i<authors.length;i++)
+{
+	element=authors[i]
+	element.style.backgroundColor='lightblue'
+	element.style.margin='5px'
+ 	console.log(element.innerHTML)
+	element.innerHTML='Lekhok-'+ i;
+}
+
+
+
+document.querySelector('.special h3') // first query-single h3 within special class
+document.querySelectorAll('.special h3')  //NodeLlist of h3  //return all
+
+document.querySelector('.special h3').style.backgroudColor='tomato'
+
+document.body.style.backgroudColor='tomato'
+
+node=tags and related things=> search dom node type=> mozila website=> eg element, text, comment node etc
+
+//we can access attributes of element also using javascript 
+document.querySelector('h3').setAttribute('title','you are best')
+
+
+//Add elements to HTML
+const first=document.getElementById('first')
+const newP=document.createElement('p')
+newP.innerHTML='This is added by JS'
+first.appendChild(newP);
+
+//we can put id='gift-list' in <ul id='gift-list'>
+const ul=document.getElementById('gift-list')
+const li=document.createElement('li')
+li.innerHTML='Brand New Gift'
+ul.appendChild(li);
+
+//childNodes and parentNodes
+document.getElementById('gift-list').childNodes
+document.getElementById('gift-list').parentNodes
+
+
+
+//18
+//callback function //pass function inside another function to do task dynamically
+function callback(name,age, task)
+{
+	clog(name,age);
+	task();
+}
+function wash()
+{
+	clog('Wash Hand')
+}
+function shower()
+{
+	clog('Take shower')
+}
+
+callback('n1',12,wash);
+callback('n2',13,shower);
+//two types of callback function=> synchronous=>(serial-wise) and asynchronous
+
+
+//arguments
+function addTwo(num1,num2)
+{
+	console.log(arguments); //array like object: [Arguments]{'0':12,'1':10,'2':13,'3':14,'4':7,'5':8}
+        for(var i=0;i<arguments.length;i++)
+		console.log(arguments[i])
+}
+addTwo(12,10,13,14,7,8); //fun declared for 2 arg but call with many arg=> arguments
+
+//We can declare and call function within a function also, we can call and define function any order in JS unlike others
+// but in case of variables we need to define first before calling unlike function
+
+
+//EVENTS
+MOUSE EVENTS:
+  	click,dbclick,mouseup, mousedown etc
+KEYBOARD EVENT:
+	keydown,keypress,keyup =>every kay has unique value
+
+
+
+//EVENT HANDLER=> syntax=> (on+event)
+eg: onclick,onmousemove,onmouseout,onmousedown etc.
+
+<h1 onclick="console.log('Hello World')">Click Me</h1>
+<button onclick="alert(29)">Click Me</button>
+<button onclick="handleClick()">Click Me</button>
+
+function handleClick()
+{
+	console.log('Someone clicked me');
+}
+
+
+<script>
+	const second=document.getElementById('second')
+        second.onclick=function()
+	{
+		console.log('second is clicked')
+	}
+
+
+	function handleClick1()
+	{
+		console.log('Someone clicked me');
+	}
+	second.onclick=handleClick1();  //It will call automatically so use below format
+	second.onclick=handleClick1;   //this will works after click
+
+
+////EVENT LISTENER  => syntax= addEventListener('event',function)
+    //we can also add one or many Event Listener also
+	second.addEventListener('click',handleClick);
+
+   //we can write directly also
+  	document.getElementById('last').addEventListener('click',function(){clog('hello');})
+
+</script>
+
+
+//EVENT BUBBLE
+.container>ul#mylist>li.item*6{lorem3}
+supposse in first li we put a id="first"
+
+if first one clicked then both will run
+1	document.getElementById('first').addEventListener('click',function(){clog('first clicked')})
+2	document.getElementsByClassName('container').addEventListener('click',function(){clog('container clicked')})
+output: 1,2  >> go to lowest level and executing lower to heigher level
+
+
+// EVENT DELEGATE=> Stop Propagating EVENT
+below this case only 1 will be output on clicking 1
+1	document.getElementById('first').addEventListener('click',
+	function(){
+		clog('first clicked')
+		event.stopPropagation();  //this will stop propagation further to higher level
+			//we can use event.stopImmediatePropagation()  =>it will close higher and lower both
+		}
+	)
+2	document.getElementsByClassName('container').addEventListener('click',function(){clog('container clicked')})
+
+
+//EVENT DELEGATE AND PURPOSE OF EVENT BUBBLE
+var items=document.getElementsByClassName('item');
+for(var i=0;i<items.length;i++)
+{
+	var item=items[i];
+	//item.addEventListener('click',function(event){clog(this,event.target)})  //this,event.target is pointer of current node
+	//item.addEventListener('click',function(event){clog(event.target.innerText)})
+	//item.addEventListener('click',function(event){clog(event.target.parentNode)})
+
+//to remove particular child go to its parent and then remove its child
+	item.addEventListener('click',function(event){event.target.parentNode.removeChild(event.target);})
+	 
+}
+
+##ADD NEW ITEM=NEW LI
+
+button#addNew{add new item};  //ITS A BUTTON
+d.gid('addNew').addEventListener('click,function(){
+	parent=d.gid('mylist');
+	var new=d.createElement('li');
+	new.innerText="brand new Item";
+	parent.appendChild(new)
+	
+})
+
+
+## but if we add new li isnside the parent of li (below removeChild code )then newer will not removed,because no event handler associated with them 
+because when removeChild code run that time adding JS was not there 
+and the array traverse only the preveous existing elements
+
+
+
+==> 2 solution=>
+way  1. run below code again=>to add event handler with newers also
+	var items=document.getElementsByClassName('item');
+	for(var i=0;i<items.length;i++)
+	{
+		item.addEventListener('click',function(event){event.target.parentNode.removeChild(event.target);})
+	}
+
+way  2. use evenListener directly to peveous //EVENT DELEGATE AND PURPOSE OF EVENT BUBBLE=> instead .item capture #mylist
+     add event handler to parent instead of child
+	in this case this=>(total #mylist ul)  and  event.target=>(only clicked li)
+
+	document.getElementById('mylist').addEventListener('click',function(){
+		//console.log(this,event.target);
+		event.target.parentNode.removeChild(event.target)
+	})
+
+
+20//
+pioneer bank
+form-control,btn btn-success,
+javascript event lists
+style.display="none","inline","block"  etc
+placeholder inside input
+value inside input=> dgid('input1').value  //but string, so before operation use pareFloat(),parseInt() 
+         //in case of input=>value and p,span,h1=> innerText,innerHTML
+//WE CAN PASS ID THROUGH FUNCTION
+
+
+20-1//
+SHOPPING CART DEVELOPMENT
+  
+
+21-1//CODES OF SHOPPING CART
+
+21-1//
+LOCAL VS GLOBAL VARIABLE
+if not declare var,let,const=>then global leack
+
+IMMEDIATELY-INVOKED FUNCTION EXPRESSION(IIFE):
+	(function(){clog('I am IIFE')})();
+
+FUNCTION DECLARATION VS EXPRESSION:
+EXPRESSION:
+ var x=function(a,b){return a*b}; //no need function name,we can use it as varible
+DECLARATION:
+ function fun(a,b){return a*b};
+
+FUNCTION USING:
+	1. reusable specific task
+	2. to reduce repeatation
+	3. specific unique task
+	4. reduce the big code in organise way
+arguments, array.join(' '), but arguments.join(' ') not work, to convert it to array
+ [...arguments].join(' ') //works
+(...)=>convert to array
+
+WHEN TO USE CALLBACK:  //DIFFERENT WORKS TO DO
+EVENT BUBBLE AND EVENT DELIGATION:
+BUILD A DIGITAL CALCULATOR:
+
+
+22//
+PIN MATCHER ASSIGNMENT
+
+
+
+23// MODERN JAVASCRIPT ES2015 OR ES6=>
+
+TEMPLATE:   `${firstName} ${lastName} is a good boy.`
+	`${firstName} ${lastName} is a good boy. he has
+	 net worth Rs.= ${20+50+30}`  \\we can use newline, values ,space everything
+
+ARROW FUNCTION:
+	//function doubleIt(num){return num*2;}
+OR====>   const doubleIt=function(num){return num*2;}
+
+OR====>	  const doubleIt=()=>5;  //arrow fun
+OR====>	  const doubleIt=num=>num*2;  //arrow fun
+OR====>	  const doubleIt=(x,y)=>x+y;  //arrow fun
+OR====>	  const doubleIt=(x,y)=>{const sum=x+y;const diff=x-y;const res=sum/dif;return res;}  //arrow fun
+
+SPREAD OPERATOR: ...
+  const arr1=[1,2,3,4]
+  const arr2=[5,6,7,8]
+const arr=arr1.concat(arr2).concat([9]);
+clog(arr) //[1,2,3,4,5,6,7,8,9]
+const arrr=[arr1,arr2,9]; //[[1,2,3,4],[5,6,7,8],9]
+so do like below
+	const arrr=[..arr1,...arr2,9];//[1,2,3,4,5,6,7,8,9]
+const maxi=Math.max(...arr1) //4
+
+
+//CLASS,CONSTRUCTOR,CREATE OBJECT FROM CLASS
+
+CLASS:
+
+  class Student{
+	constructor(sId,sName){
+		this.id=sId;
+		this.name=sName;
+		this.school="JU";
+	}
+	
+  }
+
+  const student1=new Student(12,"shuvo");
+  const student2=new Student(13,"mahi");
+  console.log(student1.id,student2.name);
+
+INHERITANCE,EXTENDS CLASS, SUPER,CLASS METHOD
+
+  class Parent{
+	constructor(){
+		this.fatherName="Rose";
+	}
+	
+  }
+  class Child extends Parent{      //inheritance
+	constructor(name){
+   		super();  //must include super keword
+		this.name=name;
+	}
+	getFullName()   //function keyword not needed
+	  {
+		return this.name+" "+this.fatherName;
+	}
+	  
+  }
+
+  const baby1=new Child("shuvo");
+  const baby2=new Child(13,"mahi");
+  console.log(baby1);//Child{fatherName:'Rose',name:'shuvo'}
+  console.log(baby1.getFullName());
+
+23-9 
+DESTRUCTURE, OBJECT, ARRAY, DESTRUCTURE COMPLEX OBJECT
+const person={name:'jack',age:17,job:'facebook',gfName:'Ema',phone" '1234',friends:['tom','yarn','michel'] }
+clog(person.gfName)
+const gfName=person.gfName
+clog(gfName)
+
+const {phone,job,salary}=person  //Destructuring //salary property not there
+clog(phone,job,salary) //1234 facebook undefined
+
+const complexObj={
+	name:'abc',
+	info: {
+		addr:'kolabagan',
+		leader:'tiger'
+	}
+ }
+
+ const {leader}=complexObj.info;  //because leader inside info
+
+
+const friends=['khan','roshan','salman','sakib','rana','laki'] 
+const[chotof,nextf,...olderf] =friends; //destructuring
+clog(chotof,nextf)   //khan roshan
+clog(oldderf)   //['salman','sakib','rana','laki']
+
+
+
+24// INTERMEDIATE JAVASCRIPTS
+Truthy and Falsy (undefined,null,Nan,"",0,false=false : true," ",' ',[], {},-,+ is true)
+
+NULL VS UNDEFINED: not defined only declaration.
+UNDEFINED: Nothing return from function and capture,lower number of parameter passing
+	calling a property of object which is not inside object,fun=undefined
+NULL:  null=>explicitly set by developer
+
+DOUBLE VS TRIPPLE EQUAL(== VS ===) ==type not checked
+const first=2;
+const second="2";
+   if(first==second)
+	clog("true") //  true for == , type not checked
+   else
+	clog("false") 
+
+
+   if(first===second)
+	clog("true") 
+   else
+	clog("false") //  print false for === , type checked
+
+MAP,FILTER,FIND,SMART WAY FOR LOOP:
+
+MAP:
+   const numbers=[3,4,5,6,7,8]
+function square(element){return element*element;}
+const square=element=>element*element;
+const square=x=>x*x;
+
+numbers.map(function(element,index,array){ console.log(element,index,array)})
+const result=numbers.map(function(element,index,array){ return element*element})
+clog(result) //[9,16,25,36,49,64]
+const result=numbers.map(square(element))
+const result=numbers.map(x=>x*x)
+
+FILTER: if condition satisfied then select
+const result=numbers.filter(x=>x>5)  // return array of satisfied
+const result=numbers.filter(x=>x<=5)  //[3,4,5]
+
+FOR EACH, AND REDUCE
+
+FIND=> FIND AND FILTER ALMOST SAME
+const isThere=numbers.find(x=>x>5)
+clog(isThere)  //6  return first satisfied elemennt
+
+const students={
+	{id:20,name:'kartik'},
+	{id:22,name:'madan'},
+	{id:23,name:'emma'},
+	{id:24,name:'watson'},
+	{id:25,name:'ella'}	
+}
+const ids=students.map(x=>x.id);
+clog(ids);  [20,22,23,24,25]
+
+const bigger=students.filter(x=>x.id>23); 
+clog(bigger)    //[{id:24,name:'watson'},{id:25,name:'ella'}]
+
+
+const isThere=students.find(x=>x.id>23); 
+clog(isThere) //{id:24,name:'watson'}
+
+SCOPE,BLOCK SCOPE,ACCESS OUTER SCOPE VARIABLE
+let,const=> scope variable not accessible before declaration error,
+var=> hoisted to its parent level //if use before declaration say undefinde not error
+if use var then it is accessible to its parent block also
+
+
+CLOSURE, ENCAPSULATION,PRIVATE VARIABLE
+
+function stopWatch(){
+    let count=0;
+    return function(){
+	count++;
+	return count;
+    }
+}
+
+const clock1=stopWatch(); //clock1 is a function (inside stopWatch) 
+now we can call clock1 which return count;
+const clock1=stopWatch();
+console.log(clock1())  //1
+console.log(clock1())  //2
+console.log(clock1())  //3
+
+const clock2=stopWatch()   //clock1 and clock2 creates different close scope environment=>closure 
+console.log(clock2()) //1
+console.log(clock1())  //4
+console.log(clock2())  //2
+
+
+ARRAY SLICE,SPLICE,JOIN
+const nums=[1,2,3,4,5,6,7,8]
+const part=nums.slice(2,5) //[3,4,5]  nums unchanged
+const removed=nums.splice(2,3) //3 piece removed=[3,4,5], nums=[1,2,6,7,8]
+const removed=nums.splice(2,3,10,11,12) //3 piece removed=[3,4,5] 
+			but inserted at that place rest nums=[1,2,6,7,8,10,11,12]
+for slice=> index-1, for splice= how many elements in 2nd parameter
+const together=nums.join(" ")
+
+BREAK ,CONTINUE IN FOR LOOP:
+ 
+
+25//
+ API JSON, SERVER, DATA LOAD, DYNAMIC WEBSITE, HTTP
+DNS=>DOMAIN NAME SERVER=>NAME TO NUMERICAL IP ADDRESS CONVERSION
+
+WHAT IS API: APPLICATION PROGRAMMING LANGUAGE
+to request=> GET =>2048 in url
+to send=> POST
+https://jsonplaceholder.typicode.com/guide/
+
+JSON,JSON STRUCTURE,PARSE,STRINGIFY,JSON PROPERTIES
+JS OBJECT NOTATION:
+	const user={id:245,name:"masud"};
+	const userJSON=JSON.stringify(user);
+	clog(userJSON)    //{"id":245,"name":"masud"}  //ID ALSO IN QUOTATION IN JSON UNLIKE OBJECT
+     
+	const userFromJSON=JSON.parse(userJSON); //{id:245,name:"masud"} //AGAIN JS OBJECT
+
+OBJECT:
+	{
+	id:245,
+	name:"masud"
+	lover:{
+	  name:"jamila",
+	  favFood:"pizza"
+	 }
+	friendsAge:[12,15,18],
+	friends:["a","b","c"]
+	}
+
+JSON:
+	{
+	id:245,
+	name:"masud"
+	"lover":{
+	  "name":"jamila",
+	  "favFood":"pizza"
+	 }
+	"friendsAge":[12,15,18],
+	"friends":["a","b","c"]
+	}
+
+JSON PLACEHOLDER: search online
+ fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
+
+output:
+{
+  "userId": 1,
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
+}
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => displayUser(json))
+      .catch(error=>console.log(error))
+
+function displayUser(users){
+ 	console.log("users",users);
+	const userNames=users.map(user=>user.username)
+	console.log(userNames)
+ }
+
+//PROMISE => NOT 100% GURANTED
+when we call data from server =>by promise 2 case:
+inspect=>network=>XHR(XML HTTP REQUEST)
+successfull=>200=ok failure=404=not found 403=FORBIDDEN  (>=500 server related,503=service unreachable.504= )
+
+fetch=> is a kind of promise
+error handle:
+ fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
+      .catch(error=>console.log(error))  //to show the errors
+
+
+gettig:
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+listing:
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+CREATING RESOURCE:
+FETCH('URL',{method:'POST',body:JSON.stringify({OBJECT}),headers:{'Content-type':'application/hson';charset=UTF-8}})
+FETCH('URL',{method,body,headers})
+
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify({
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+
+UPDATING:
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PUT',
+  body: JSON.stringify({
+    id: 1,
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+
+PATCHING:
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PATCH',
+  body: JSON.stringify({
+    title: 'foo',
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+DELETE:
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'DELETE',
+});
+
+
+FILTERING:
+// This will return all the posts that belong to the first user
+fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+//LLISTING NESTED RESOURCES
+// This is equivalent to /comments?postId=1
+fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+
+
+//JQuery ajax,JQuery get,JQuery post =>old(w3schools=>not mandatory)
+  
+
+
+26//  IMPORTANT INTERVIEW QUESTIONS
+ const normalPerson={
+	firstName:'Rahim',
+	lastName:'Uddin',
+	salary:15000,
+	getFullname: function(){
+		console.log(this.firstName,this.lastName);
+	},
+	chargeBill: function(amount){
+		console.log(this);
+		this.salary=this.salary-amount;
+		return this.salary;
+	}
+}
+
+normalPerson.chargeBill(3000); //12000
+normalPerson.chargeBill(3000); //9000
+
+BIND TO BORROW METHOD FROM ANOTHER OBJECT=>3 METHODS=>BIND,CALL,APPLY
+
+const normalPerson1={
+	firstName:'yousuf',
+	lastName:'karim',
+	salary:18000
+}
+
+const normalPerson2={
+	firstName:'alok',
+	lastName:'basu',
+	salary:20000
+}
+
+
+
+1. BIND:
+
+less efficient function of normalPerson binded with normalPerson1   
+ 
+//normalPerson.chargeBill()
+const normalPerson1charge=normalPerson.chargeBill.bind(normalPerson1)  //now here=> this=normalPerson1 and normalPerson1charge is binded to chargeBill method
+normalPerson1charge(2000) //{firstName:'yousuf',lastName:'karim',salary:18000}  //this
+console.log(normalPerson1.salary) //16000
+
+const normalPerson2charge=normalPerson.chargeBill.bind(normalPerson2)  //now here=> this=normalPerson2 and normalPerson2charge is binded to chargeBill method
+normalPerson2charge(2000) //{firstName:'alok',lastName:'basu',salary:20000}  //this
+console.log(normalPerson2.salary) //18000
+
+
+2. CALL:
+	normalPerson.chargeBill.call(normalPerson1, 2000);  //pass this and parameter of function both separated by comma
+
+                                                            baseobject.method.call(anotherobj,para1,parameter2,........)
+		                                            //{firstName:'yousuf',lastName:'karim',salary:18000}
+	normalPerson.chargeBill.call(normalPerson2, 2000);  //{firstName:'alok',lastName:'basu',salary:20000} 
+
+3. APPLY: CALL VS APPLY
+	CALL	normalPerson.chargeBill.call(normalPerson1, 2000,500,30);    //COMMA SEPARATED ARGUMENTS PASSED
+ 	APPLY	normalPerson.chargeBill.apply(normalPerson1, [2000,500,30])  //ARRAY  OF ARGUMENTS TO BE PASSED
+	
+
+WINDOW,GLOBAL VARIABLE,GLOBAL SCOPE
+write window in console to check what is window=> everything inside window=> eg docment, console , api etc
+check global=> in console type variable name and run
+to set global explicitly:write window.salary=88889
+
+NEW KEYWORD,CLASS AND OBJECT DIFFERENCE
+
+  class Student{
+	constructor(id,name,fees){
+		this.id=id;
+		this.name=name;
+		this.fees=fees;
+	}	
+  }
+
+ const st1=new Student(10,'baby',2000); 
+ const st2=new Student(12,'khaby',5000);   //class is a template of objects
+
+
+NB: before ES6 we didn't use class , we used function but function name in Capital starting, it means class
+EG:
+  function Baby(id,name,fees){     //before ES6 it was class
+		this.id=id;
+		this.name=name;
+		this.fees=fees;
+  }
+const b1=new Baby(10,'baby',2000)
+clog(s1)
+
+// new keyword use to make object from class
+
+UNDERSTAND THIS KEYWORD:
+const myObj={
+	name:'kuddus',
+	getFullName: function(){  
+		return 'Mr. '+ this.name;
+	}
+}
+
+myObj.getFullName();   //'Mr. kuddus'
+
+const anotherObj={
+	name:'biddut'
+}
+
+anotherObj.getFullName=myObj.getFullName;
+console.log(anotherObj.getFullName); //ƒ (){ return 'Mr. '+ this.name;}
+console.log(anotherObj.getFullName()) //Mr. biddut   //value of this is left side of dot.
+
+function add(a,b)
+{
+	console.log(this);
+	return a+b;
+}
+
+add(4,5) // here dot is not present,nothing left side of dot,value of this=window here 
+anotherObj.sum=add
+anotherObj.sum() // here this will be another Obj
+
+<p onclick="this.innerText='I AM CLICKED'">I am Paragraph</p> //on clicking paragraph will be changed
+
+
+//ASYNC AWAIT: (USE OF FETCH WITHOUT THEN:)  
+
+USE OF FETCH WITH THEN:
+ul#my-list
+function loadData(){
+	fetch('https://jsonplaceholder.typicode.com/posts')
+	.then(res=>res.json())
+	.then(data=>{
+		displayData(data)
+ 	})
+}
+loadData();
+function displayData(data){
+	//console.log(data)
+	const parentNode=document.getElementById('my-list');
+	for(let i=0;i<data.length;i++)
+	{
+		const user=data[i];
+		const li=document.createElement('li');
+		li.innerText=user.name;
+		parentNode.appendChild(li);
+		
+	}
+}
+
+
+
+USE OF FETCH WITHOUT THEN:async and await
+//function works synchronously=>serialwize,but before fuction we can use async keyword to work asynchrounously
+1.
+function hello(name){
+	return 'Hello '+name;
+}
+const greeting=hello('mofiz');
+console.log(greeting); 			 //"Hello Mofiz"
+
+2.
+async function hello(name){              //async used
+	return 'Hello '+name;
+}
+const greeting=hello('mofiz');
+console.log(greeting);  		//Promise
+greeting.then(res=>console.log(res))    //"Hello Mofiz"
+
+NB: ASYNC ONLY BEFORE FUCTION KEYWORD, NOT DIRECT =>  ONLY PROMISE
+for arrow fuction:
+INVALID:	async const abc=(){};
+VALID:		const abc=async(){};
+
+
+
+async function loadData(){
+	const response=await fetch('https://jsonplaceholder.typicode.com/posts');  //async fuction will wait untill fetch come
+	const data= await resposnse.json(); //wait till conversion to JSON
+	//console.log(data)
+	//return data;
+	//displayData(data); //we can use function here also
+	return data;
+}
+//loadData();  //if we call displayData() inside function
+loadData().then(data=>{displayData(data)});  //if we don't want to call displayData() function inside async function
+
+
+
+ASYNCHRONOUS JAVASCRIPT setTimeOut,setInterval:(NB: sychronous=serial wize)
+
+function doSomething(){
+	console.loge(45);
+}
+
+console.loge(12);
+setTimeOut(doSomething); //op: 12,23,45  because of setTimeOut=>At end of all works
+console.loge(23);
+
+//setTimeOut(function,Interval-milliSeconds)=> eg: setTimeOut(doSomething,2000);  //here run >=2s (may take 1h also but not <2s) //once
+//Anonymous function inside  //setTimeOut(function(){},2000)  //setTimeOut(()=>{},2000)
+
+//setInterval(()=>{},interval)   //Run Exactly after interval milliseconds //repeatedly
+setInterval(doSomething,2000 )
+
+
+
+//HOW JS WORKS EVENT LOOOP STACK AND QUEUE
+//JS event loop=>mozilla site
+//If we do anything in javascript there is event loop(Stack=>fuction,Heap=>object,Queue=>messages)
+//eg setTimeOut is preveously in Heap  and when ready comes to Queue
+//Stack=>LIFO,HEAP=UN-ORGANISED, QUEUE=FIFO
+
+JAVASCRIPT DATE AND TIME:MOZILLA ARTICLE  =>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+ new Date()
+const start=new Date()   //Fri Jan 27 2023 12:20:13 GMT+0530 (India Standard Time)
+for(let i=0;i<1000000000;i++){}
+const end=new Date()
+console.log('time elapsed',end-start)   //258  =>it is in milliseconds
+
+
+
+26-2//
+TRY CREATE REACT  //create react app=> google search=>github facebook/create-react-app
+		//https://github.com/facebook/create-react-app
+STOPWATCH PROJECT
+
+npx create-react-app my-app
+cd my-app
+npm start
+
+If you've previously installed create-react-app globally via npm install -g create-react-app, we recommend you uninstall the package
+using npm uninstall -g create-react-app or yarn global remove create-react-app to ensure that npx always uses the latest version.
+
+
+27 HOW BROWSER WORKS:
+document.body.contentEditable=true //after enter in connsole evrything will be editable
+layout=>tree like structure
+alert("hello")
+confirm("are you sure")
+prompt("tell me your name") //take any input
+
+URL,URL PARTS, QUERY STRING,HASH,SUBDOMAIN   
+address bar=> select=>CTRL+F=>complete url
+
+=>reactjs.org
+youtube =>video url=>add in url &t=180s=>play
+#id
+https://reactjs.org/tutorial/tutorial.html#setup-option-2-local-development-environment
+protocol=https
+subdomain=reactjs
+domain=.org
+id=tutorial.html#setup-option-2-local-development-environment
+path=tutorial
+query= after ?
+
+
+27-5//
+DOCUMENT LOCATION,ACCESS HREF,HASH,ASSIGN
+
+search window location api in google=>mozilla
+window.location //file location
+location.reload() //reload webpage
+location.assign('new url')
+location.href="url"
+
+
+27-6
+HISTORY API,BACK,FORWARD,GO,HISTORY LENGTH
+you can long press to see history
+search JAVASCRIPT api in google=>mozilla
+window.history.back()
+window.history.forward()  //forward 
+window.history.go(-1)     //back 1 step
+window.history.go(5)      //forward 5 steps
+window.history.go(0) //reload
+window.history.go()  //reload
+
+COOKIES,DEV TOOL APPLICATION TAB,COOKIES AT SERVER
+//how facebook know is I am logged in or not =>cookies=>preveous history,which user, translate or not 
+inspect=>application=>cookies
+	2 types: 1.SESSION COOKIES 2.SPECIAL EXPIRATION DATE PERSISTANCE COOKIES
+some chater sites may track cookies to send related adv
+JAVASCRIPT COOKIES=> MOZILLA
+
+
+LOCAL STORAGE,SESSION STORAGE, EDIT STORAGE INFORMATION=>key value pair
+cookies is a way to store some data to your browser
+some other tricks to save data on browser is session storage and local storage 
+
+inspect=>application=>local storage 
+if I close browser then also local storage data will persist
+
+localStorage.setItem("subscribed","true")  //persist even if browser is closed //don't store confidential information
+
+sessionStorage.setItem("isPlaying","true")  //persist till session end
+
+sessionStorage.setItem("isPlaying","true")
+
+
+BROWSER CLEAR CACHE,CHROME EXTENSION,WEB STORE,RESTART:
+if javascript changed and
+if cache not cleared then open devtool=>long press on reload=>Empty Cache Hard Reload
+
+SETTING:
+saved passowrd,extension,payment etc are there
+webstore: exension market
+Addblock,nimbus screensot,page ruler
+chrome://restart in browser
+from task mangager => we can end some tab process inside chrome
+
+28 
+JAVASCRIPT DEBUG, WEB DEBUG, DEV TOOL MASTERING
+
+COMMAND LINE TOOLS OVERVEW
+VS-CODE
+git --version
+node --version
+
+CMD=>
+CD DIR1/DIR2
+cd ../..
+C:
+D:
+partially type+tab will load automatically
+cd WebDevelopment\Javascript
+dir 
+touch
+mkdir
+
+there are various cmd tools=>(ConEmu,cmder),bash,powershell
+
+MODULE OVERVIEW,Salary app overvieww,git clone issue
+clone=>Salary app
+colne issue=>
+try: git clone https:\\link
+     git clone "link"
+     git clone http:\\link
+or download zip
+
+Dev TOOL ELEMEMNT TAB,EDIT HTML,GET STYLE,DEVICE TAB
+inspect => selector symbol
+right click=>copy,copy style,break on
+inspect=>toggle device toolbar=>to check responsivenes
+right click=>show ruler,capture full screenshots
+offline support test
+ctrl+f=>boots,wp=>bootstrap,wordpress
+
+EDIT CSS STYLE LIVE, HOVER CLASS, CSS BOX MODEL,EVENT HANDLER
+//style right side of html in inspect
+//to check new style of an element check by putting it inside element.style{ }
+//.cls=>check class
+//:hov=>check hover

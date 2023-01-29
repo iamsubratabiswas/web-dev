@@ -1680,3 +1680,515 @@ EDIT CSS STYLE LIVE, HOVER CLASS, CSS BOX MODEL,EVENT HANDLER
 //to check new style of an element check by putting it inside element.style{ }
 //.cls=>check class
 //:hov=>check hover
+computed=> box visually
+Event Listener=>anchestor , frameworks
+dom breakpoints
+accessibility
+
+SOURCE TAB,BREAK POINT,CALL STACK, CONSOLE TABLE
+sources tab=>index.html,salaryApp.js,script
+ctrl+f
+ctrl+shift+o
+breakpoint=>reload
+sources>data 
+console.table(data) 
+console.table(data[0].values)
+ctrl+shift+f=>search in all files
+
+CONSOLE TAB, PRESERVE LOG,ERROR LOG,CONSOLE API
+   CTRL+F=> function //if not working //breakpoint
+chrome devtool=> developpers.google 
+
+NETWORK TAB,REQUEST METHOD, HEADER, RESPONSE TYPE
+inspect =>network=>
+browser generally not allow request more than 6 at at time 
+headers,prevew,response,timing
+online,slow 3g,fast 3g
+we can record(solid round)
+JS,MEDIA,FONT etc
+
+PERFORMANCE TAB, MEMORY TAB,AUDIT,APPLICATION TAB
+performance,memory,application,security,audits=>run audits(lighthouse tool)
+
+websites: dev tool tips=>umaar.com
+that js dude=> chrome devtools
+
+28-1
+28_5 ONE FINAL RECAP DAY OF JAVASCRIPT
+variables,if else,for loop,while loop,function,object,let,const,spreat operator
+Destructure(object,array),arrow function,default parameter,template string,map,
+filter,find,local storage,session storage, fetch,GET vs POST
+
+
+
+29 
+WEATHER API PRACTICE PROBLEM
+boredapi.com
+
+fetch('https://www.boredapi.com/api/activity/')
+.then(res=>res.json())
+.then(data=>{console.log(data)})
+
+randomuser.me
+
+programming hero github=> temperature-hot
+openweathermap.org/api
+
+30 
+DEV TOOL AND BUG FIXING PRACTICE
+
+problem try out=> issue reproduce
+incongnito =>CTRL+SHIFT+N
+jsfiddle,sandbox =>phero github=>issue-tracker=> solve issue
+
+
+30 
+MODERN FRONT-END APPLICATION CORE CONCEPTS
+component, how to go one part to another without navigation
+
+WEB COMPONENT,4 TYPES OF COMPONENT,IDENTIFY COMPONENT
+How to know component=>
+	1. Repeating in pattern 
+	2. container component
+	3. breakdown to small
+	4. Unique
+Angular,React ,View
+
+
+TEMPLATE,DYNAMICALLY CREATE HTML ELEMENTS BASED ON DATA
+(reactJS,angular,view)
+
+fetch('url')
+.then(res=>res.json())
+.then(data=>showUserNames(data));
+
+Only by javasccript:TEMPLATE
+function showUserNames(data)
+{
+	//console.log(data);
+	let lists='';
+	forEach(user=>{
+		//lists=lists+ `<li>${user.name} : ${user.email}</li>`
+		lists=lists+ `<div>
+			<h2>${user.name}</h2>
+			<p>Email : ${user.email}</p>
+			</div>`
+
+
+	})
+	const ul=document.getElementById('user-list');
+	ul.innerHTML=lists;
+}
+
+we have dynamically create and set all div here
+
+
+//SINGLE PAGE APPLICATION(SPA),PERFORMANCE BENIFIT
+Multi Page Applicatio=> MANY HTML PAGE
+
+Single Page Application: SINGLE HTML PAGE// NOT whole page load eg:GMAIL
+
+MODERN MEDIUM SIZE APPLICATION IS SPA  //loading time less, performace high
+REACT,ANGULAR,VIEW=>SPA
+
+
+ROUTING , ROUTE PARAMETER,EOUTING ANGULAR:
+design fixed and variable part of page: eg: angular documentation page
+location.href.split("/")
+now deecide which component should show according to this path=> routing=>which road to chose
+set the path=> route configuration
+eg: angular documentation routing
+routing=> define various part of url,and according to that url which component to show
+
+
+WEBSITE STATE, STATE MANAGEMENT, PURPOSE OF STATE:
+ STATE: store status of the application(overall concept of storing status)
+ gmail: load data from database => when state changed we are keeping updated to browser as well as updating server database
+
+Static stateless website
+gmail,amazon => statefull website 
+modern angular, react => state management are there
+example: CART ITEM
+
+old site=> states on database
+form submission=>  database store  
+but both cases again reload page from server => performace goes down
+so modern react, angular has state management
+
+
+CHARTING FRAMEWORKS, D3JS,NVD3, CHARTJS
+charting is important concept=> pi-chart, bar chart,line chart etc
+eg=> tesla stock in google search(area chart, line chart)
+
+wide range use: d3 chart
+google: d3 chart example >d3js.org>examples (box plot,bubble chart, calender, usa map,bar chart,zoomable,pi chart)
+EASY VERSION: NVD3 CHART=> nvd3.org> example 
+	    : chartjs=> paid
+
+
+SIMPLE ANGULAR APPLICATION,ANGULAR CLI, ROUTING
+nodejs+vs code=> ok
+google search=> getting started with angular =>angular.io
+
+1> install angular globally cli: npm install -g @angular/cli   //for first time in computer
+then
+> Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+2> create an applicaion on suitable location: ng new my-app
+3>run app: cd my-app               //scss=> functon within css,dynamic and advanced up/down arrow
+		if we want to open code on vs code from cli=> code . =>enter	
+4>	 ng serve --open
+
+package.json: dependencies
+main things: inside src(my code or source)
+index.html  => only ONE => single page(SPA)
+	<app-root></app-root> =>everything will showed here
+root url	<base href="/"> 
+my works will be inside src folder=>
+ src > app> app.component.html=> will go inside main HTML
+	    app.component.scss=> css
+	    app.component.ts=>  overall things to write inside it
+see documentation by 5 days at least or videos from youtube
+
+if interviewer ask about view or other frontend frameworks=> give me a week, i will complete it
+		,I know everything about frontend, so easily can learn all
+
+
+31 
+REACT CORE CONCEPTS, JSX, PROPS, STATE
+REACT=>JAVASCRIPT LIBRRAY=> simplified use of combinig everything javascript 
+
+FRAMEWORKS VS LIBRARY=>
+	1. Framework is big , all elements of it may use or not use 
+	   but Library is smaller and all the basic things included on which maximum portion we use 
+           React is smaller library than Angular Framework
+	vast use => ReactJS
+started internally by FACEBOOK 2011-2012
+
+INSTALL:
+   google search=> Create React App=> Facebook/create-react-app github
+	https://github.com/facebook/create-react-app
+  Must Intall nodejs=>nodejs.org
+	npx create-react-app my-app
+	cd my-app
+	npm start
+alternatively you can do it with yarn
+   google=> yarn ccreate react app
+you can use codesandbox also= codesandbox.io
+
+
+my-app   =>app name
+├── README.md
+├── node_modules   //don't touch here
+├── package.json
+├── .gitignore
+├── public         // rare use
+│   ├── favicon.ico
+│   ├── index.html   
+│   └── manifest.json
+└── src             //main work folder
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+    └── setupTests.js
+
+index.html
+	we can change title, favicon
+	everything show inside <div id="root"> </div>,
+robots.txt=>crawler or robots or want to know about app, or tell not to access etc information
+favicon.ico it is favicon
+
+src=>
+	index.js=> nothing much here also
+		we are importing react and react-dom only  //react means core react
+			there are various things in react by which
+		 	we can build Android/iOS App=>react-native, VR =>react,react-vr
+                importing index.css and App from App.js
+                we puting <App/> inside 'root' of index.html by ReactDom.render() method
+	App.js=> main work is here
+		importing react and App.css
+		logo
+
+JSX,DYNAMIC CONTENT,DYNAMIC STYLE IN REACT
+ now we can add HTML in js file also
+ to use: google react emmet in vs code=>medium.com
+ file=>preferences=>settings=>Emmet=>settings.json=>
+	{
+   		"emmet.includeLanguages": {
+      		"javascript": "javascriptreact"
+  	 	}
+	}
+
+code:
+   eg: 
+		 
+	      
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+	var name="Dr. mahfuz"; 
+	var person={
+		    name:"Subrata";
+		    id:10;
+	           }
+        var style={color='red',backgroundColor='yellow'}
+  return (
+    <div className="App">
+      <header className="App-header">
+	<h1 className="hello" style={style}>sum= {(2+3)*25}</h1> // it will work in jsx although normal HTML can't run it
+        <p style={{color='red',backgroundColor='yellow'}}> my heading:{name} and person: {person.id+" "+ person.name}</p>
+      </header>
+    </div>
+  );
+}
+
+
+we use className instead class in jsx
+backgroundColor instead background-color
+
+COMPONENT, 4 WAYS TO IDENTIFY COMPONENT
+any framework(react,angular,viewjs) core concept => component
+
+How to know component=>
+	1. similar in look different in Data(eg: Adobe pricing, amazon, thatjsdude.com)
+	2. container component
+	3. breakdown to small
+	4. Unique
+
+CREATE COMPONENT, RETURN MULTIPLE HTML FROM A COMPONENT
+function App() {
+  return (
+    <div className="App">
+         <Person></Person>
+         <Person></Person>
+	 <Person></Person>
+    </div>
+  ); 
+}
+function Person() {
+        const personStyle={border:'2px solid red', margin:'10px'}
+
+  	return (<div style={personStyle}>  //similar in patern
+                 <h1></h1>
+		 <h2></h2>
+	</div>
+  );
+  }
+export default App;
+
+
+HERE component:
+	function Person() {
+  		return  (<>          //if multiple tag then must be wraped inside mother tag
+			<h1 style={{color='red',backgroundColor='yellow'}}></h1>
+			//<h1 style="border: 2px solid red;"></h1> //invalid string format css invalid
+			<h2></h2>
+		</>);
+	}
+NB:
+ 1.first letter of component is Upper case
+ 2. return single tag
+
+	
+1.1. DYNAMIC IN DATA=> PROPS=>short form of properties
+     we will take parameter
+
+function App() {
+
+  const names=['Dev','Jeet','Ankush']
+  return (
+    <div className="App">
+         <Person name="Dev" gf="koel" food="burger"></Person>   // now {name:,gf:,food:} will pass through as props parameter to the component Person below
+         <Person name={names[0]} gf="Swastika" food="Bananna"></Person> //we can put from array also
+	 <Person name="Ankush" gf="Oindrila" food="Strawberry"></Person>
+    </div>
+  );
+
+  function Person(props) {                //props passing to componenet
+        const personStyle={border:'2px solid red', margin:'10px'}
+
+  	return (<div style= >  //similar in patern
+                 <h1>Name: {props.name} </h1>
+		 <h2>gf: {props.gf}</h2>
+	</div>);
+  } 
+}
+export default App;
+
+
+PASS OBJECT TO COMPONENTS AND ACROSS OBJECT:
+function App() {
+  const names=['Dev','Jeet','Ankush']
+  const products=[{name:'Photoshop',price:'$90.99'},{name:'Illustrator',price:'$60.99'},{name:'Pdf reader',price:'$50'}]
+  return (
+    <div className="App">
+         //<Product name={products[0].name} price={products[0].price}></Product> // this case {props.name}
+         <Product product={products[0]}></Product>                      //this case {props.product.name}
+         <Product product={products[1]}></Product>
+         <Product product={products[2]}></Product>
+    </div>
+  );
+}
+
+function Product(props){
+ const productStyle={
+   border:'1px solid gray',
+   bordrRadius: '5px';
+   backgroundColor:'lightgray',
+   height:'200px',
+   width:'200px',
+   float:'left'
+   }
+  const {name,price}=props.product;  //destructuring
+  return (
+	<div style={productStyle}>
+          <h2>Name:{props.product.name}</h2>
+          <h2>Name:{name}</h2>         //written by destructuring above
+          <h2>{props.product.price}</h2>
+          <h2>Buy Now</h2>
+	</div>
+ );
+}
+
+export default App;
+
+
+CREATE MULTIPLE COMPONENTS FROM AN ARRAY OF OBJECTS:
+function App() {
+
+  const names=['Dev','Jeet','Ankush']
+  const products=[{name:'Photoshop',price:'$90.99'},{name:'Illustrator',price:'$60.99'},{name:'Pdf reader',price:'$50'}];
+  const productNames=products.map(product=>product.name) 
+  const heros=names.map(name=>name)
+  return (
+    <div className="App">
+         <ul>
+
+	  {
+		products.map(product=><li>{product.name}</li>)
+	  } 
+	 </ul>
+
+	  {
+		products.map(pd=><Product product={pd}></Product>)
+	  }
+         //<Product product={products[0]}></Product>                      //this case {props.product.name}
+         //<Product product={products[1]}></Product>
+         //<Product product={products[2]}></Product>
+    </div>
+  );
+}
+
+  function Product(props){
+  const {name,price}=props.product;  //destructuring
+  return (
+	<div style>
+          <h2>Name:{name}</h2>
+          <h2>{price}</h2>
+          <h2>Buy Now</h2>
+	</div>
+ );
+}
+export default App;
+
+
+
+INTRODUCTION TO COMPONENT STATE:
+example=> add to cart
+There are various way to declarer states
+[state,setUseState_fun]=useState(10)=> React Hooks
+
+function App() {
+  return (
+    <div className="App">
+	<Counter></Counter>
+    </div>
+  );
+}
+function Counter(){ 
+   const [count,setCount]=useState(0)                  //Creating states he    
+ return (
+	<div>
+		<h1>Count:{count}</h1>
+        </div>
+ );
+}
+export default App;
+
+
+//COMPONENT STATE HOOK AND SET
+function App() {
+  return (
+    <div className="App">
+	<Counter></Counter>
+    </div>
+  );
+}
+function Counter(){     
+ const [count,setCount]=useState(0)
+ const handleIncrease=()=>{
+	//const newCOunt=count+1;
+	//setNewcCount(newCount);     //count value new
+	  setNewcCount(count+1);
+ };          
+  
+ return (            
+	<div> 
+		<h1>Count:{count}</h1>     //it will dynamically change
+		<button onClick={handleIncrease}>Increase</button>              //creating Button 
+		<button onClick={()=>setNewcCount(count+1)}>Increase</button>
+		<button onClick={()=>setNewcCount(count-1)}>Decrease/button>
+        </div>
+ );
+}
+export default App;
+NB:GOOGLE SEARCH: REACT ENENTLISSTENER LIST=> event llive cheatsheet=>reactermony.com
+
+
+LOAD DYNAMIC DATA,API CALL,useEffect INTEGRATE STATE
+ 
+useEffect(fun,intitial_state)
+//COMPONENT STATE HOOK AND SET
+function App() {
+  return (
+    <div className="App">
+	<Counter></Counter>
+	<Users></Users>    //but we want to load data from external API  //external data=>useEffect(fun) in component
+    </div>
+  );
+}
+function Counter(){     
+ const [count,setCount]=useState(0)         
+  
+ return (            
+	<div>
+		<button onClick={()=>setNewcCount(count+1)}>Increase</button>
+        </div>
+ );
+}
+
+function Users(){ 
+const [users,setUsers]=useState([]);
+useEffect(()=>{
+	fetch('https://jsonplaceholder.typicode.com/users')
+	.then(res=>ress.json()) 
+	.then(data=>setUsers(data)) // setting up useState data  
+//})          //automatic call repeatedly//useEffect //to manage external data 
+,[]})   set initial data [] to stop reated call
+
+ return (            
+	<div>
+		<h3>Dynamic Users: {users.length} </h3>
+		<ul>
+		{
+			users.map(user=><li>{user.name}</li>})
+		}
+		</ul>
+        </div>
+ );
+}
+

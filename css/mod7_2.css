@@ -1,0 +1,229 @@
+.sky{
+    height: 500px;
+    width: 1500px;
+  background-color: skyblue;
+  border-radius: 20px;
+}
+.sun{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-color:crimson;
+    position: relative;
+    top: 400px;
+}
+@keyframes sunrise {
+    0%{
+        background-color: rgb(76, 34, 34);
+        top: 400px;
+        left: 0px;
+    }
+    12%{
+        background-color: crimson;
+        top: 180px;
+        left: 170px;
+    }
+
+    25%{
+        background-color: yellow;
+        top: 80px;
+        left:350px;
+
+    }
+    50%{
+
+        background-color: white;
+        top: 0px;
+        left:700px ;
+
+    }
+
+    75%{
+        background-color: yellow;
+        top: 80px;
+        left: 1050px;
+    }
+    88%{
+        background-color: crimson;
+        top: 180px;
+        left: 1220px;
+    }
+
+    100%{
+        background-color:rgb(76, 34, 34);
+        top: 400px;
+        left: 1400px;
+       }
+    
+}
+
+
+@keyframes sunrisesky {
+    0%{
+        background-color: rgb(0, 0, 0);
+    }
+    12%{
+        background-color: rgba(220, 20, 60, 0.442);
+
+    }
+
+    25%{
+        background-color: rgb(182, 182, 101);
+
+    }
+    50%{
+
+        background-color: rgb(245, 237, 237);
+    }
+
+    75%{
+        background-color:rgb(182, 182, 101);
+    }
+    88%{
+        background-color: rgba(220, 20, 60, 0.442);
+    }
+
+    100%{
+        background-color: rgb(0, 0, 0);
+       }
+    
+}
+
+
+.sky:hover .sun{
+  animation:sunrise 30s linear infinite;
+}
+
+.sky:hover{
+    animation:sunrisesky 30s linear infinite;
+  }
+
+
+
+
+  
+@keyframes bouncekari {
+
+    0%{
+        left: 0px;
+        top: 0;
+        background-image: linear-gradient(deeppink,green);
+    }
+    12%{
+        left: 180px;
+        top: 120px;
+        background-image: linear-gradient(deeppink,green);
+    }
+    25%{
+        left: 350px;
+        top: 400px;
+        background-image: linear-gradient(green,deeppinK);
+    }
+    38%{
+        left: 550px;
+        top: 220px;
+        background-image: linear-gradient(green,deeppinK);
+    }
+    50%{
+
+        left: 700px;
+    top: 180px;
+    background-image: linear-gradient(deeppink,green);
+    }
+   
+    63%{
+
+        left: 900px;
+    top: 220px;
+    background-image: linear-gradient(deeppink,green);
+    }
+
+    75%{
+        left: 1050px;
+        top: 400px;
+        background-image: linear-gradient(green,deeppinK);
+    }
+
+    88%{
+        left: 1250px;
+        top: 320px;
+        background-image: linear-gradient(green,deeppinK);
+    }
+
+    100%{
+        left: 1400px;
+        top: 300px;
+        background-image: linear-gradient(deeppink,green);
+       }
+
+
+}
+
+
+.stage{
+background-color: lightseagreen;
+height: 500px;
+width: 1500px;
+border-radius: 20px;
+}
+
+.tennis {
+height: 100px;
+width: 100px;
+background-color: red;
+border-radius: 100%;
+position: relative;
+}
+
+.stage:hover .tennis
+{
+animation: bouncekari 1.3s linear
+ 1s infinite;    
+}
+
+
+
+
+
+.field{
+    background-color: lightgreen;
+    height: 400px;
+    width: 1450px;
+    padding-top: 100px;
+    border-radius: 20px;
+}
+
+.bat{
+    transition: transform .4s linear;
+    }
+    .field:hover .bat{
+        transform:rotate(-60deg) ;
+        transform-origin: 100% 0%;/*x axis 100% upper axis:0%*/
+    }
+    
+    .ball{
+        height: 40px;
+        width: 40px;
+        background-color: red;
+        border: 2px dashed black;
+        border-radius: 100%;
+        position: relative;
+        left: 360px;
+        bottom: 110px;
+        transition: transform .5s linear .6s;
+    }
+    
+    /* we want to use total .field:hover on .ball */
+    
+    .field:hover .ball{
+        /* now if we hover on field then ball will move below code */
+        transform: translate(1045px,-343px);
+        /* x axis,y axis */
+    }
+
+    footer{
+        text-align: center;
+        color: deeppink;
+        font-weight: 12px;
+    }
+    

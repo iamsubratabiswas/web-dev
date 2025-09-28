@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>module 2</title>
+    
+    <!-- Embaded style css -->
+    <style>
+        /* stylename:stylevalue; */
+
+        h1{
+            color: rgb(255, 0, 0);
+            background-color: sandybrown;
+            height: 90px;
+            /* px,percentage usable for measurment */
+            width: 75%;
+
+        }
+        h2{
+            color: blueviolet;
+        }
+
+        img{
+            width: 50%;
+        }
+
+        p{
+            color: salmon;
+            font-size: 20px;
+            font-weight: 200;  
+            /* normal=400,bold=700 */
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+
+        }
+
+        #birthday{
+                    font-size: 40px;
+            color: slateblue;
+        }
+        #cake{
+            color: cyan;
+        }
+
+        .friend{
+            background-color: greenyellow;
+            width: 400px;
+        }
+        .neighbour{
+            width: 200px;
+
+        }
+        .romantic{
+            background-color: purple;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 30px;
+        }
+        /* only for friend class inside h1 tag */
+        h1.friend{
+            font-size: 60px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>i am h1</h1> 
+    <h1 class="friend">class="friend"amother h1</h1>   
+ 
+    <h2>i am h2</h2>
+    <p> <span class="romantic">span class="romantic" to use same line different css by id,class </span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda perspiciatis eligendi in fugiat magni ratione nostrum libero, obcaecati illo voluptatum quod, cumque corrupti pariatur dicta excepturi nobis, beatae ipsam distinctio provident eos recusandae quis nihil sint quas! Animi, nam aspernatur.</p>
+     
+    <p id="birthday"  class="friend"> id="birthday"  class="friend" , id with  # </p>
+    <p id="cake">id="cake" id cant be duplicated,cake </p>
+
+    <p class="friend">class="friend" class with dot "." </p>
+    <p class="friend">class="friend" class can be multiple duplicated</p>
+    <p class="friend neighbour">class="friend neighbour" multiple class member friend and neighbour</p>
+    <p class="neighbour"> class="neighbour" i am your neighbour with class</p>
+
+    <img src="images/img3.jpeg" alt="">
+</body>
+
+
+</html> 

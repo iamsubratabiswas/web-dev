@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html table</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td,th{
+            border: 1px solid lightgray;
+            padding: 0 10px;
+        }
+    </style>
+</head> 
+<body>
+
+
+<h1>TABLE</h1>
+
+    <!-- tag name: table=> thead(tr,th),tbody(tr=row,td=data)
+     -->
+
+     <table>
+         <caption>RICH DUDES</caption>
+         <thead>
+             <tr>
+                 <th>NAME</th>
+                 <th>COMPANY</th>
+                 <th>SALLERY</th>               
+             </tr>
+
+         </thead>
+         <tbody>
+            <tr>
+                <td>person-1</td>
+                <td>company-1</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>person-2</td>
+                <td>company-2</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>person-3</td>
+                <td>company-3</td>
+                <td>3000</td> 
+            </tr>
+         </tbody>
+     </table>
+
+     <h1>FORM</h1>
+
+     <form action="">
+         <p>Name: <input type="text"></p>
+         <!-- WE CAN ADD PLACEHOLDER ALSO -->
+         <p>Name: <input placeholder="Enter Your Name" type="text"></p>
+         <p>Telephone: <input type="tel" name="" id=""> </p>
+         <p>Email: <input type="email" name="" id=""></p>
+         <fieldset> 
+             <!-- fieldset to give a boudary line around all options and legend is description of choices-->
+             <legend>i am legend from fielset to p(radio)</legend>
+             <!-- we must label for tag to select radio by tapping anywhere in te lines p>label>input type=radio it select one of the same name field-->
+             <p><label for="lamborgini"><input type="radio" name="car" id="lamborgini">chose lamborgini</label></p>
+             <p><label for="duccati"><input type="radio" name="car" id="duccati">choose duccati</label></p> 
+             <p><label for="tata"><input type="radio" name="car" id="tata">choose duccati</label></p>
+
+         </fieldset>
+         <br>
+         <fieldset>
+             <legend>select flowers</legend>
+             <p><label for="flow"><input type="radio" name="flower" id="flow">flower - 1</label></p>
+
+             <p><label for="flo"><input type="radio" name="flower" id="flo">flower - 2</label></p>
+
+             <p><label for="flower"><input type="radio" name="flower" id="flower">flower - 3</label></p>
+         </fieldset>
+
+
+         <h1>CHECKBOX</h1>
+
+         <fieldset>
+             <legend>select yor books</legend>
+             <p><label for="book"><input type="checkbox" name="book" id="book">C/C++/JAVA/PYTHON/KOTLIN</label></p>
+             <p><label for="boo"><input type="checkbox" name="book" id="boo">ASM/SQL/PLSQL/DBMS</label></p>
+             <p><label for="bookk"><input type="checkbox" name="book" id="bookk">JAVASCRIPT/HTML/CSS/REACT/NODEJS/MONGODB/PHP</label></p>
+
+         </fieldset>
+        
+        <br><br>
+         <label for="cars">Choose a car dropdown:</label>
+
+        <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+        </select>
+
+         <h1>special text area in paragraph to write something more</h1>
+
+         <p><label for="">special instructons : <textarea name="" id="" cols="30" rows="10"></textarea></label></p>
+        
+
+         <h1>submit button</h1>
+
+         <button type="submit">SUBMIT YOUR ORDER</button>
+
+
+
+     </form>
+
+    
+</body>
+</html>

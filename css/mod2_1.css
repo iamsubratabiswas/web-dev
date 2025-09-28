@@ -1,0 +1,18 @@
+/* exernal css */
+
+.blog1{
+    border: 5px solid purple ;
+    border-radius: 20px;
+    margin: 1%;
+    width: 30%;
+    display: inline-block; /*to take all blog1 class to left we can also use float: left; for same purpose*/
+    /*we should calculate margin+padding+width+border thickness acordingly to keep inside the page*/
+    
+    
+}
+h3{
+  text-align:center;
+}
+p{
+    text-align: justify; /*llike books*/
+}

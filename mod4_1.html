@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <style>
+
+     /*static:not affected by left,right,top,bottom, default is static 1st,6th
+     
+     relative:position is relative to it normal position, 2nd
+
+     absolute:respect to the nearest positioned ancestor (first occurence of viewport) if we use left,right....etc otherwise 
+           virtually in normal space like roof on earth,no space take,3rd
+
+    fixed:relative to viewport if we use left,right....etc 
+          otherwise stay virtually in normal position like floating cloud in sky,no space take 4th
+
+     sticky:combinatiion of relative and fixed ,fifth
+
+      */
+
+        .container{    
+            /* scection work like a rubber container initiaally zero size to infinite */
+            /* section and div both block element */
+           background-color: lightblue;
+        }
+
+      div{
+          height:100px;
+          width:100px;
+          color: red; /*set font colors*/
+          background-color: darkviolet;
+      }
+       
+       #first{
+           position: static;
+           background-color: forestgreen;
+           left: 100px;
+           
+       }
+       #second{
+           background-color: greenyellow;
+           position: relative;
+           left: 100px;
+           top: 20px;
+       }
+       #third{
+           background-color: hotpink;
+           position: absolute;
+            right: 0px;  /*setup to glue it at bottom right corner of initial viewport*/
+            bottom: 0px;
+       }
+
+       #fourth{
+           background-color: firebrick;
+            position: fixed; /*by default static*/
+            right: 0px;  /*setup to fixed it in to right corner*/
+            top: 0px;
+
+       }
+       #fifth{
+           background-color:gray;
+           position:sticky;
+           left: 300px;
+           top: 50px;  /*on scrolling page above it will be fixed
+                        when distance from top=50px */
+
+            }
+
+     #sixth{
+           background-color: black;
+           left: 100px;
+
+            }
+
+    </style>
+     
+</head>
+<body>
+    <section>
+        <h1>learning position</h1>
+       
+    </section>
+
+    <section class="container">   
+        <div id="first">first</div>
+        <div id="second">second</div>
+        <div id="third">third</div>
+        <div id="fourth">fourth</div>
+        <div id="fifth">fifth</div>
+        <div id="sixth">sixth</div>
+
+        <div>div1</div>
+        <div>div2</div>
+        <div>div3</div>
+        <div>div4</div>
+        <div>div5</div>
+        <div>div6</div>
+        <div>div7</div>
+        <div>div8</div>
+        <div>div9</div>
+        <div>div10</div>
+
+    </section>
+</body>
+</html>

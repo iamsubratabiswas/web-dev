@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class and pseudo eleent</title>
+    <style>
+        h1 {
+            color: salmon;
+        }
+
+        h1 {
+
+            color: indianred;
+            
+        }
+/* Psedo class ":" */
+
+ /* HOVER */
+        .special:hover{
+/* if we give colon after tag it indicates pseudo class */
+            font-size: 40px;
+            width: 400px;
+            height: 50px;
+            background-color: violet;
+            border-radius: 30px;
+        }
+
+ /* FOCUS */
+ input:focus{
+     /* focus it self */
+     font-weight: 700;
+     font-size: 30px;
+     color: green;
+ }
+ /* specific list item */
+ 
+ li:first-child{
+    border-radius: 12px;
+    background-color: indianred;   
+ }
+ li:nth-child(2n+1){
+     border-radius: 45px;
+     background-color: green;
+ }
+ li:last-child{
+    border-radius: 200px;
+    background-color: indianred;   
+ }
+
+/* visited is used to display is it visited or not */
+ a:visited{
+     color: violet;
+ }
+
+
+
+/* Pseudo element "::" and inside content: ; */
+
+h2::before{
+    content: "Hello "; /*to add Hello before every h2*/
+    color: burlywood;
+    font-size: 25px;
+    background-color: cornflowerblue;
+    border-radius:45px;
+}
+
+.bye::after{
+    content: "  Bye"; /*to add Bye after class bye*/
+    color: green;
+    font-size: 25px;
+    background-color: violet;
+    border-radius:45px;
+}
+
+/* Counter */
+body{
+    counter-reset: countkari; /*setting a coutnter by a name*/
+}
+p::before{
+    counter-increment: countkari; /*incrementing counter*/
+    content: "Hello " counter(countkari ) " : "; /*displaying counter*/
+}
+
+p::after{
+    content: "💖"; 
+}
+
+
+  
+</style>
+</head>
+
+<body>
+<!-- some sortcut keys
+ul>li.item$*3{}     //">"=inside_tag   "#" =id      "."=class,
+                     $=increment,"*"=total num, {}=inside text
+eg: ul>li*7{child $}
+
+
+-->
+
+    <h1>Pseudo class</h1>
+    <h1>Normal class</h1>
+    <h1 class="special">Polite class using hover</h1>
+
+    <h2>i am h1</h2>
+    <h2>i am h2</h2>
+    <h2 class="bye">i am h3</h2>
+     
+    <h3>focus bellow</h3>
+    <input name="email" type="text"> 
+    <br><br><br>
+    <input name="password" type="text"><br>
+
+    <a href="https://www.youtube.com/channel/UC8y5FIKeN1b7Hs3y4Doaskw">My youtube Channel</a><br>
+    <a href="https://www.twitter.com/amsubratabiswas">Twitter=>Uername: amsubratabiswas</a><br>
+    <a href="https:www.linkedin.com/in/iamsubratabiswas">Linkedin=>Uername: iamsubratabiswas</a><br>
+    <a href="https://www.github.com/iamsubratabiswas">github=>Uername: iamsubratabiswas</a><br>
+    <a href="https://www.facebook.com/iamsubratabiswas">Facebook=>Uername: iamsubratabiswas</a><br>
+    <a href="https://www.instagram.com/iamsubratabiswas/">Instagrm=>Uername: iamsubratabiswas</a><br>
+
+    <ul>
+        <li>child 1</li>
+        <li>child 2</li>
+        <li>child 3</li>
+        <li>child 4</li>
+        <li>child 5</li>
+        <li>child 6</li>
+        <li>child 7</li>
+    </ul>
+
+    <p>i am  paragraphg using counter</p>
+    <p>i am  paragraphg using counter</p>
+    <p>i am  paragraphg using counter</p>
+    <p>i am  paragraphg using counter</p>
+    <p>i am  paragraphg using counter</p>
+    <p>i am  paragraphg using counter</p>
+
+
+   <!--
+        .blog*3>h3{i am h3 - $}+p>lorem10
+
+        here + for adding more tags with prevois one
+        here h3+p will be made for each inside three blog class div
+    -->
+
+   <div class="blog">
+       <h3>i am h3 - 1</h3>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, consectetur.</p>
+   </div>
+   <div class="blog">
+       <h3>i am h3 - 2</h3>
+       <p>Dolorem quo, corporis veritatis aperiam rem vel aliquid numquam similique!</p>
+   </div>
+   <div class="blog">
+       <h3>i am h3 - 3</h3>
+       <p>Quia suscipit consectetur harum sapiente exercitationem omnis facere corrupti laboriosam!</p>
+   </div>
+
+
+
+</body>
+
+</html>

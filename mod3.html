@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>insrtuctions to operate github</h1>
+    <!--
+        create github account,download git-scm and set terminal by 'git bash'  
+        
+        create a new repository on the command line
+echo "# web-dev" >> README.md    //make a README.md = web-dev
+git init   //open message evelop
+git add README.md     //add message inside envelop use "." in case of multiple
+git commit -m "first commit"  //close envelop
+git branch -M main  
+git remote add origin https://github.com/iamsubratabiswas/web-dev.git   //set origin/destination to send
+
+git config --global user.email "subrotobiswas53@gmail.com" //for setting purpose
+git config --global user.name "iamsubratabiswas" //for setting purpose
+
+git push -u origin main  //send message to origin :main branch
+…or push an existing repository from the command line
+git remote add origin https://github.com/iamsubratabiswas/web-dev.git
+git branch -M main
+git push -u origin main  //for first time to recognise branch
+
+git diff   //to veiw chages  after using this comand we need to use "q" to exit
+
+//changed code
+git add . //' "." to use all code inside web-dev
+git commit -m "commit name"
+git push // no -u origin need to mention as already existing details
+
+//if someone changed code at time of teamwork you need to take that code to your local machine
+git pull
+
+you can add summery and check uncheck repo element from desktop easily
+we can commit,push,fetch codes easily by github desktop 
+    if someone chnges our codes then we can fetch and pull it by 
+single clicks and automatically codes go to local machiines
+
+so it is bidirectional/two way solution
+
+
+
+//by command 
+to check branch:
+git branch
+git checkout -a  //all branch
+git checkout  //current branch
+new branch: git checkout -b branchname  (eg:camera)
+to take upstream:git push --set-upstream origin camera
+git checkout develop   //change to branch 'develop'
+to restore changes: git restore filename
+
+//to check username,emails
+git config user.name
+git config user.email
+we can create new branch,check history etc visually 
+
+to publish special branch name is
+ gh-pages
+
+then go to settings , somewhere you can get your page is live ,just copy the link without last dot "." and share
+
+if you delete the branch ,and in your local machine you are still in deleted brach but modify some of codes already,then you cant chage branch directly
+then how to  change branch ?
+check what are modified ? revert it , now you can change branch, pull it ,afer that modify the code
+
+to publish ,again take all codes to gh-pages by pull request ,merge it 
+if after merge it not showing immediately ,then inspect=>console=>mouse long press on reload button=>empty cache hard reload
+fon
+
+
+
+
+//deployed file name : by default= index.html > in lowercse 
+if another name : eg : site.html
+then append site.html on link and share it 
+folder,file format everything must be in original case existing
+-->
+    
+</body>
+</html>

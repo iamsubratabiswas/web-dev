@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 https://code.visualstudio.com/docs/introvideos/basics
 
 
-=======
->>>>>>> a5432fcbfca8fadd84d74855aa2680baee6d32d9
 /* HOVER */
         .special:hover
          input:focus
@@ -55,7 +52,6 @@ p::before{
     left: 80px;
 */
 
-<<<<<<< HEAD
 /*    static: normal type of position , if block element one after another from top to bottom, if inline element one after another from left to right, default position
      
      relative:one after another from top to bottom if block element, and original position is also occupied although element shift
@@ -69,8 +65,6 @@ absolute:one after another from top to bottom of block element, but original pos
      position: relative;
     left: 80px;
 */
-=======
->>>>>>> a5432fcbfca8fadd84d74855aa2680baee6d32d9
 
 <!-- some sortcut keys
 ul>li.item$*3{}     //">"=inside_tag   "#" =id      "."=class,
